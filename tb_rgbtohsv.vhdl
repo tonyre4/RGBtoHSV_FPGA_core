@@ -20,11 +20,12 @@ architecture text_io of rgbtohsvtb is
 	signal in1,in2,in3: std_logic_vector(7 downto 0);
 	signal out1,out2,out3 : unsigned(7 downto 0);
 	signal clk: std_logic := '0';
+	signal write_on: std_logic := '0';
 begin
 	clk <=  '1' after 5 ns when clk = '0' else
         	'0' after 5 ns when clk = '1';
 
-	D1: entity work.rgbtohsv (behaviorial) port map(in1,in2,in3,open,out2,out3);	
+	top: entity work.rgbtohsv (behaviorial) port map(in1,in2,in3,out1,out2,out3);	
 
 	in11: process(clk)
 		variable line_in: LINE;
@@ -35,6 +36,7 @@ begin
 				READLINE(file_in1,line_in);
 				READ(line_in, input_tmp);
 				in1<=STD_LOGIC_VECTOR(to_unsigned(input_tmp,8));
+				write_on <= '1';
 			end if;
 		end if;
 	end process;
@@ -71,23 +73,24 @@ begin
 		variable line_out: LINE;
 		variable output_tmp: INTEGER;
 	begin
-		if clk'event and clk = '1' then
+		if clk'event and clk = '1' and write_on='1' then
 			if not (ENDFILE(file_in1)) then
 				--output_tmp := CONV_INTEGER(unsigned(out1));
-				output_tmp := to_INTEGER(unsigned(out1));
+				output_tmp := to_INTEGER(out1);
 				WRITE(line_out,output_tmp);
 				WRITELINE(file_out1,line_out);
 			end if;
 		end if;
 	end process;
+
 	out21: process(clk)
 		variable line_out: LINE;
 		variable output_tmp: INTEGER;
 	begin
-		if clk'event and clk = '1' then
+		if clk'event and clk = '1' and write_on='1'  then
 			if not (ENDFILE(file_in1)) then
 				--output_tmp := CONV_INTEGER(unsigned(out1));
-				output_tmp := to_INTEGER(unsigned(out2));
+				output_tmp := to_INTEGER(out2);
 				WRITE(line_out,output_tmp);
 				WRITELINE(file_out2,line_out);
 			end if;
@@ -98,10 +101,10 @@ begin
 		variable line_out: LINE;
 		variable output_tmp: INTEGER;
 	begin
-		if clk'event and clk = '1' then
+		if clk'event and clk = '1' and write_on='1'  then
 			if not (ENDFILE(file_in1)) then
 				--output_tmp := CONV_INTEGER(unsigned(out1));
-				output_tmp := to_INTEGER(unsigned(out3));
+				output_tmp := to_INTEGER(out3);
 				WRITE(line_out,output_tmp);
 				WRITELINE(file_out3,line_out);
 			end if;

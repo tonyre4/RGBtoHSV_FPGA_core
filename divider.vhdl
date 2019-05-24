@@ -290,3 +290,20 @@ end case;
 end process;
 
 end behaviorial;
+
+architecture simple of divider is 
+  signal Auns, Quns: unsigned(dividendo'length-1 downto 0);
+  signal Buns : unsigned(divisor'length-1 downto 0);
+begin 
+
+  --Convert inputs to unsigned:
+  Auns <= unsigned(dividendo);
+  Buns <= unsigned(divisor);
+
+  --Do the division:
+  Quns <= Auns/Buns;
+
+  --Covert results to std_logic_vector:
+  resultado <= Quns;
+
+end architecture;
