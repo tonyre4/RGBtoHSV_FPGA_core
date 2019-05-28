@@ -1,5 +1,6 @@
 import cv2
 
+#img = cv2.imread("test.png")
 img = cv2.imread("marialeon.jpg")
 r,g,b = cv2.split(img)
 cv2.imshow("r",r)
