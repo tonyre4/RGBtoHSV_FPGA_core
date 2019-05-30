@@ -25,7 +25,8 @@ begin
 	clk <=  '1' after 5 ns when clk = '0' else
         	'0' after 5 ns when clk = '1';
 
-	top: entity work.rgbtohsv (complex) port map(in1,in2,in3,out1,out2,out3);	
+	--top: entity work.rgbtohsv (simplest) port map(in1,in2,in3,out1,out2,out3);	
+	top: entity work.rgbtohsv (complex2) port map(in1,in2,in3,out1,out2,out3);	
 
 	in11: process(clk)
 		variable line_in: LINE;

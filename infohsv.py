@@ -2,8 +2,8 @@ import cv2
 import numpy as np
 
 #img = cv2.imread("colorcube.png")
-img = cv2.imread("marialeon.jpg")
-#img = cv2.imread("test.png")
+#img = cv2.imread("marialeon.jpg")
+img = cv2.imread("test.png")
 
 shape = img.shape
 npx = shape[0]*shape[1]
