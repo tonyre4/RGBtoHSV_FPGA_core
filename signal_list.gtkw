@@ -1,24 +1,24 @@
 [*]
 [*] GTKWave Analyzer v3.3.86 (w)1999-2017 BSI
-[*] Thu May 30 15:11:53 2019
+[*] Tue Jun  4 02:04:30 2019
 [*]
-[dumpfile] "/home/tonny/Documents/arqdecompus/RGBtoHSV/test.vcd"
-[dumpfile_mtime] "Thu May 30 14:52:07 2019"
-[dumpfile_size] 209706848
-[savefile] "/home/tonny/Documents/arqdecompus/RGBtoHSV/signal_list.gtkw"
-[timestart] 1111078060000
-[size] 1000 600
+[dumpfile] "/home/tonny/Documents/arqdecompus/RGBtoHSV_FPGA_core/test.vcd"
+[dumpfile_mtime] "Tue Jun  4 01:51:56 2019"
+[dumpfile_size] 24552
+[savefile] "/home/tonny/Documents/arqdecompus/RGBtoHSV_FPGA_core/signal_list.gtkw"
+[timestart] 65580000
+[size] 1032 600
 [pos] 203 51
-*-23.843983 1111096200000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+*-23.843983 95000000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
 [treeopen] rgbtohsvtb.
-[sst_width] 223
+[sst_width] 266
 [signals_width] 134
 [sst_expanded] 1
 [sst_vpaned_height] 152
 @24
-rgbtohsvtb.top.ru[7:0]
-rgbtohsvtb.top.gu[7:0]
 rgbtohsvtb.top.bu[7:0]
+rgbtohsvtb.top.gu[7:0]
+rgbtohsvtb.top.ru[7:0]
 @200
 -
 @24
@@ -48,7 +48,9 @@ rgbtohsvtb.top.fdiff[7:0]
 -
 @24
 rgbtohsvtb.top.s0div[13:0]
+@25
 rgbtohsvtb.top.s1div[13:0]
+@24
 rgbtohsvtb.top.s2div[13:0]
 rgbtohsvtb.top.s3div[13:0]
 rgbtohsvtb.top.s4div[13:0]
@@ -67,9 +69,8 @@ rgbtohsvtb.top.s5sum[13:0]
 -
 @28
 rgbtohsvtb.top.selector[2:0]
-@29
-rgbtohsvtb.top.h[7:0]
 @24
+rgbtohsvtb.top.h[7:0]
 rgbtohsvtb.top.s[7:0]
 rgbtohsvtb.top.v[7:0]
 [pattern_trace] 1

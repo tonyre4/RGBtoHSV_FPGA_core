@@ -550,7 +550,7 @@ end architecture;
 architecture simplest of RGBtoHSV is
 
 
-signal Ru,Gu,Bu : unsigned(R'length-1 downto 0);
+signal Ru,Gu,Bu,Hbuff : unsigned(R'length-1 downto 0);
 signal max,fmax,min,diff,fdiff : unsigned(R'length-1 downto 0);
 
 signal selector : std_logic_vector(2 downto 0);
@@ -658,7 +658,7 @@ difft255 <= diff*"11111111";
 
 Scalc: entity work.divider (simple) generic map(difft255'length) port map(difft255,fmax,Sbuff);
 
-process(max)
+process(max,Sbuff)
 begin
 	if max="00000000" then
 		S <= (others => '0');
@@ -739,7 +739,7 @@ s3sum <= to_unsigned(120,s3div'length) - s3div;
 s4sum <= to_unsigned(240,s4div'length) + s4div;
 s5sum <= to_unsigned(240,s5div'length) - s5div;
 
-process(max,Ru,Gu,Bu)
+process(max,min,Ru,Gu,Bu)
 begin
 	if max=Ru then
 		if Gu>Bu then
@@ -764,22 +764,30 @@ begin
 	end if;
 end process;
 
-process(diff,selector)
+process(diff,selector,s0sum,s1sum,s2sum,s3sum,s4sum,s5sum)
 begin
 	--For fix division by 0
 	if diff="00000000" then
-		H <= "00000000";
+		Hbuff <= "00000000";
 	else
 		case selector is
-			when "000"  => H <= s0sum(8 downto 1);
-			when "001"  => H <= s1sum(8 downto 1);
-			when "010"  => H <= s2sum(8 downto 1);
-			when "011"  => H <= s3sum(8 downto 1);
-			when "100"  => H <= s4sum(8 downto 1);
-			when "101"  => H <= s5sum(8 downto 1);
-			when others => H <= "00000000";
+			when "000"  => Hbuff <= s0sum(8 downto 1);
+			when "001"  => Hbuff <= s1sum(8 downto 1);
+			when "010"  => Hbuff <= s2sum(8 downto 1);
+			when "011"  => Hbuff <= s3sum(8 downto 1);
+			when "100"  => Hbuff <= s4sum(8 downto 1);
+			when "101"  => Hbuff <= s5sum(8 downto 1);
+			when others => Hbuff <= "00000000";
 		end case;
 	end if;
 end process;
 
+clipH: process(Hbuff)
+begin
+	if Hbuff="10110100" then --180
+		H<="00000000";
+	else
+		H<=Hbuff;
+	end if;
+end process;
 end architecture;
