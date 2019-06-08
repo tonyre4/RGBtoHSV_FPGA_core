@@ -1,0 +1,447 @@
+Release 14.7 Map P.20131013 (lin64)
+Xilinx Mapping Report File for Design 'fmc_dvidp_dvi_passthrough_demo'
+
+Design Information
+------------------
+Command Line   : map -intstyle ise -p xc6slx150t-fgg676-3 -w -logic_opt off -ol
+high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off
+-pr off -lc off -power off -o fmc_dvidp_dvi_passthrough_demo_map.ncd
+fmc_dvidp_dvi_passthrough_demo.ngd fmc_dvidp_dvi_passthrough_demo.pcf 
+Target Device  : xc6slx150t
+Target Package : fgg676
+Target Speed   : -3
+Mapper Version : spartan6 -- $Revision: 1.55 $
+Mapped Date    : Fri Jun  7 17:34:55 2019
+
+Design Summary
+--------------
+Number of errors:      0
+Number of warnings:    8
+Slice Logic Utilization:
+  Number of Slice Registers:                   105 out of 184,304    1%
+    Number used as Flip Flops:                 105
+    Number used as Latches:                      0
+    Number used as Latch-thrus:                  0
+    Number used as AND/OR logics:                0
+  Number of Slice LUTs:                      1,955 out of  92,152    2%
+    Number used as logic:                    1,928 out of  92,152    2%
+      Number using O6 output only:           1,565
+      Number using O5 output only:               1
+      Number using O5 and O6:                  362
+      Number used as ROM:                        0
+    Number used as Memory:                      25 out of  21,680    1%
+      Number used as Dual Port RAM:              8
+        Number using O6 output only:             0
+        Number using O5 output only:             0
+        Number using O5 and O6:                  8
+      Number used as Single Port RAM:           14
+        Number using O6 output only:            10
+        Number using O5 output only:             0
+        Number using O5 and O6:                  4
+      Number used as Shift Register:             3
+        Number using O6 output only:             3
+        Number using O5 output only:             0
+        Number using O5 and O6:                  0
+    Number used exclusively as route-thrus:      2
+      Number with same-slice register load:      0
+      Number with same-slice carry load:         2
+      Number with other load:                    0
+
+Slice Logic Distribution:
+  Number of occupied Slices:                   724 out of  23,038    3%
+  Number of MUXCYs used:                       972 out of  46,076    2%
+  Number of LUT Flip Flop pairs used:        1,989
+    Number with an unused Flip Flop:         1,893 out of   1,989   95%
+    Number with an unused LUT:                  34 out of   1,989    1%
+    Number of fully used LUT-FF pairs:          62 out of   1,989    3%
+    Number of unique control sets:              14
+    Number of slice register sites lost
+      to control set restrictions:              58 out of 184,304    1%
+
+  A LUT Flip Flop pair for this architecture represents one LUT paired with
+  one Flip Flop within a slice.  A control set is a unique combination of
+  clock, reset, set, and enable signals for a registered element.
+  The Slice Logic Distribution report is not meaningful if the design is
+  over-mapped for a non-slice resource or if Placement fails.
+
+IO Utilization:
+  Number of bonded IOBs:                        72 out of     396   18%
+    Number of LOCed IOBs:                       72 out of      72  100%
+    IOB Flip Flops:                             26
+
+Specific Feature Utilization:
+  Number of RAMB16BWERs:                         1 out of     268    1%
+  Number of RAMB8BWERs:                          0 out of     536    0%
+  Number of BUFIO2/BUFIO2_2CLKs:                 1 out of      32    3%
+    Number used as BUFIO2s:                      1
+    Number used as BUFIO2_2CLKs:                 0
+  Number of BUFIO2FB/BUFIO2FB_2CLKs:             0 out of      32    0%
+  Number of BUFG/BUFGMUXs:                       2 out of      16   12%
+    Number used as BUFGs:                        2
+    Number used as BUFGMUX:                      0
+  Number of DCM/DCM_CLKGENs:                     1 out of      12    8%
+    Number used as DCMs:                         1
+    Number used as DCM_CLKGENs:                  0
+  Number of ILOGIC2/ISERDES2s:                   0 out of     586    0%
+  Number of IODELAY2/IODRP2/IODRP2_MCBs:         0 out of     586    0%
+  Number of OLOGIC2/OSERDES2s:                  13 out of     586    2%
+    Number used as OLOGIC2s:                    13
+    Number used as OSERDES2s:                    0
+  Number of BSCANs:                              0 out of       4    0%
+  Number of BUFHs:                               0 out of     384    0%
+  Number of BUFPLLs:                             0 out of       8    0%
+  Number of BUFPLL_MCBs:                         0 out of       4    0%
+  Number of DSP48A1s:                            0 out of     180    0%
+  Number of GTPA1_DUALs:                         0 out of       4    0%
+  Number of ICAPs:                               0 out of       1    0%
+  Number of MCBs:                                0 out of       4    0%
+  Number of PCIE_A1s:                            0 out of       1    0%
+  Number of PCILOGICSEs:                         0 out of       2    0%
+  Number of PLL_ADVs:                            0 out of       6    0%
+  Number of PMVs:                                0 out of       1    0%
+  Number of STARTUPs:                            0 out of       1    0%
+  Number of SUSPEND_SYNCs:                       0 out of       1    0%
+
+Average Fanout of Non-Clock Nets:                4.45
+
+Peak Memory Usage:  1017 MB
+Total REAL time to MAP completion:  26 secs 
+Total CPU time to MAP completion:   26 secs 
+
+Table of Contents
+-----------------
+Section 1 - Errors
+Section 2 - Warnings
+Section 3 - Informational
+Section 4 - Removed Logic Summary
+Section 5 - Removed Logic
+Section 6 - IOB Properties
+Section 7 - RPMs
+Section 8 - Guide Report
+Section 9 - Area Group and Partition Summary
+Section 10 - Timing Report
+Section 11 - Configuration String Information
+Section 12 - Control Set Information
+Section 13 - Utilization by Hierarchy
+
+Section 1 - Errors
+------------------
+
+Section 2 - Warnings
+--------------------
+WARNING:Place:1109 - A clock IOB / BUFGMUX clock component pair have been found
+   that are not placed at an optimal clock IOB / BUFGMUX site pair. The clock
+   IOB component <fmc_dvidp_dvii_clk> is placed at site <W14>. The corresponding
+   BUFG component <video_clk_BUFG> is placed at site <BUFGMUX_X2Y2>. There is
+   only a select set of IOBs that can use the fast path to the Clocker buffer,
+   and they are not being used. You may want to analyze why this problem exists
+   and correct it. This is normally an ERROR but the CLOCK_DEDICATED_ROUTE
+   constraint was applied on COMP.PIN <fmc_dvidp_dvii_clk.PAD> allowing your
+   design to continue. This constraint disables all clock placer rules related
+   to the specified COMP.PIN. The use of this override is highly discouraged as
+   it may lead to very poor timing results. It is recommended that this error
+   condition be corrected in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <cconv/S1/Auns[13]_Buns[7]_div_2/GLOBAL_LOGIC0> is incomplete. The signal
+   does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <cconv/S0/Auns[13]_Buns[7]_div_2/GLOBAL_LOGIC0> is incomplete. The signal
+   does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <cconv/S5/Auns[13]_Buns[7]_div_2/GLOBAL_LOGIC0> is incomplete. The signal
+   does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <cconv/S4/Auns[13]_Buns[7]_div_2/GLOBAL_LOGIC0> is incomplete. The signal
+   does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <cconv/S3/Auns[13]_Buns[7]_div_2/GLOBAL_LOGIC0> is incomplete. The signal
+   does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <cconv/S2/Auns[13]_Buns[7]_div_2/GLOBAL_LOGIC0> is incomplete. The signal
+   does not drive any load pins in the design.
+WARNING:PhysDesignRules:781 - PULLUP on an active net. PULLUP of comp
+   fmc_dvidp_i2c_scl_PULLUP is set but the tri state is not configured. 
+
+Section 3 - Informational
+-------------------------
+INFO:LIT:243 - Logical network fmc_dvidp_config_l/cpu/read_strobe has no load.
+INFO:LIT:395 - The above info message is repeated 10 more times for the
+   following (max. 5 shown):
+   cconv/S1/resultado<13>,
+   cconv/S0/resultado<13>,
+   cconv/S0/resultado<0>,
+   cconv/S5/resultado<13>,
+   cconv/S4/resultado<13>
+   To see the details of these info messages, please use the -detail switch.
+INFO:MapLib:562 - No environment variables are currently set.
+INFO:LIT:244 - All of the single ended outputs in this design are using slew
+   rate limited output drivers. The delay on speed critical single ended outputs
+   can be dramatically reduced by designating them as fast outputs.
+INFO:Pack:1716 - Initializing temperature to 85.000 Celsius. (default - Range:
+   0.000 to 85.000 Celsius)
+INFO:Pack:1720 - Initializing voltage to 1.140 Volts. (default - Range: 1.140 to
+   1.260 Volts)
+INFO:Map:215 - The Interim Design Summary has been generated in the MAP Report
+   (.mrp).
+INFO:Pack:1650 - Map created a placed design.
+
+Section 4 - Removed Logic Summary
+---------------------------------
+   5 block(s) removed
+  26 block(s) optimized away
+  49 signal(s) removed
+
+Section 5 - Removed Logic
+-------------------------
+
+The trimmed logic report below shows the logic removed from your design due to
+sourceless or loadless signals, and VCC or ground connections.  If the removal
+of a signal or symbol results in the subsequent removal of an additional signal
+or symbol, the message explaining that second removal will be indented.  This
+indentation will be repeated as a chain of related logic is removed.
+
+To quickly locate the original cause for the removal of a chain of logic, look
+above the place where that logic is listed in the trimming report, then locate
+the lines that are least indented (begin at the leftmost edge).
+
+The signal "fmc_dvidp_config_l/cpu/int_enable" is sourceless and has been
+removed.
+The signal "fmc_dvidp_config_l/cpu/read_strobe" is sourceless and has been
+removed.
+The signal "fmc_dvidp_config_l/cpu/int_update_enable" is sourceless and has been
+removed.
+ Sourceless block "fmc_dvidp_config_l/cpu/int_enable_flop" (SFF) removed.
+The signal "fmc_dvidp_config_l/cpu/read_active" is sourceless and has been
+removed.
+ Sourceless block "fmc_dvidp_config_l/cpu/read_strobe_flop" (SFF) removed.
+The signal "fmc_dvidp_config_l/cpu/int_enable_value" is sourceless and has been
+removed.
+The signal "fmc_dvidp_config_l/cpu/int_pulse" is sourceless and has been
+removed.
+The signal "fmc_dvidp_config_l/cpu/not_active_interrupt" is sourceless and has
+been removed.
+The signal "cconv/N1" is sourceless and has been removed.
+The signal "cconv/S1/resultado<13>" is sourceless and has been removed.
+The signal "cconv/S1/resultado<12>" is sourceless and has been removed.
+The signal "cconv/S1/resultado<11>" is sourceless and has been removed.
+The signal "cconv/S1/resultado<10>" is sourceless and has been removed.
+The signal "cconv/S1/resultado<9>" is sourceless and has been removed.
+The signal "cconv/S0/resultado<13>" is sourceless and has been removed.
+The signal "cconv/S0/resultado<12>" is sourceless and has been removed.
+The signal "cconv/S0/resultado<11>" is sourceless and has been removed.
+The signal "cconv/S0/resultado<10>" is sourceless and has been removed.
+The signal "cconv/S0/resultado<9>" is sourceless and has been removed.
+The signal "cconv/S0/resultado<0>" is sourceless and has been removed.
+The signal "cconv/S5/resultado<13>" is sourceless and has been removed.
+The signal "cconv/S5/resultado<12>" is sourceless and has been removed.
+The signal "cconv/S5/resultado<11>" is sourceless and has been removed.
+The signal "cconv/S5/resultado<10>" is sourceless and has been removed.
+The signal "cconv/S5/resultado<9>" is sourceless and has been removed.
+The signal "cconv/S4/resultado<13>" is sourceless and has been removed.
+The signal "cconv/S4/resultado<12>" is sourceless and has been removed.
+The signal "cconv/S4/resultado<11>" is sourceless and has been removed.
+The signal "cconv/S4/resultado<10>" is sourceless and has been removed.
+The signal "cconv/S4/resultado<9>" is sourceless and has been removed.
+The signal "cconv/S4/resultado<0>" is sourceless and has been removed.
+The signal "cconv/S3/resultado<13>" is sourceless and has been removed.
+The signal "cconv/S3/resultado<12>" is sourceless and has been removed.
+The signal "cconv/S3/resultado<11>" is sourceless and has been removed.
+The signal "cconv/S3/resultado<10>" is sourceless and has been removed.
+The signal "cconv/S3/resultado<9>" is sourceless and has been removed.
+The signal "cconv/S2/resultado<13>" is sourceless and has been removed.
+The signal "cconv/S2/resultado<12>" is sourceless and has been removed.
+The signal "cconv/S2/resultado<11>" is sourceless and has been removed.
+The signal "cconv/S2/resultado<10>" is sourceless and has been removed.
+The signal "cconv/S2/resultado<9>" is sourceless and has been removed.
+The signal "cconv/S2/resultado<0>" is sourceless and has been removed.
+The signal "cconv/Scalc/resultado<15>" is sourceless and has been removed.
+The signal "cconv/Scalc/resultado<14>" is sourceless and has been removed.
+The signal "cconv/Scalc/resultado<13>" is sourceless and has been removed.
+The signal "cconv/Scalc/resultado<12>" is sourceless and has been removed.
+The signal "cconv/Scalc/resultado<11>" is sourceless and has been removed.
+The signal "cconv/Scalc/resultado<10>" is sourceless and has been removed.
+The signal "cconv/Scalc/resultado<9>" is sourceless and has been removed.
+The signal "cconv/Scalc/resultado<8>" is sourceless and has been removed.
+Unused block "fmc_dvidp_config_l/cpu/int_update_lut" (ROM) removed.
+Unused block "fmc_dvidp_config_l/cpu/int_value_lut" (ROM) removed.
+Unused block "fmc_dvidp_config_l/cpu/read_active_lut" (ROM) removed.
+
+Optimized Block(s):
+TYPE 		BLOCK
+GND 		XST_GND
+GND 		cconv/XST_GND
+VCC 		cconv/XST_VCC
+VCC 		cconv/S0/Auns[13]_Buns[7]_div_2/XST_VCC
+VCC 		cconv/S1/Auns[13]_Buns[7]_div_2/XST_VCC
+VCC 		cconv/S2/Auns[13]_Buns[7]_div_2/XST_VCC
+VCC 		cconv/S3/Auns[13]_Buns[7]_div_2/XST_VCC
+VCC 		cconv/S4/Auns[13]_Buns[7]_div_2/XST_VCC
+VCC 		cconv/S5/Auns[13]_Buns[7]_div_2/XST_VCC
+VCC 		cconv/Scalc/Auns[15]_Buns[7]_div_2/XST_VCC
+GND 		fmc_dvidp_config_l/XST_GND
+GND 		fmc_dvidp_config_l/cpu/XST_GND
+VCC 		fmc_dvidp_config_l/cpu/XST_VCC
+FD 		fmc_dvidp_config_l/cpu/ack_flop
+   optimized to 0
+FDR 		fmc_dvidp_config_l/cpu/int_capture_flop
+	Property STUCK_AT NOT found
+FDR 		fmc_dvidp_config_l/cpu/int_flop
+	Property STUCK_AT NOT found
+LUT4 		fmc_dvidp_config_l/cpu/int_pulse_lut
+   optimized to 0
+FDE 		fmc_dvidp_config_l/cpu/shadow_carry_flop
+   optimized to 0
+FDE 		fmc_dvidp_config_l/cpu/shadow_zero_flop
+   optimized to 0
+INV 		fmc_dvidp_config_l/cpu/stack_count_inv
+GND 		fmc_dvidp_config_l/prog/XST_GND
+VCC 		fmc_dvidp_config_l/prog/XST_VCC
+GND 		fmc_dvidp_dvi_in_l/XST_GND
+VCC 		fmc_dvidp_dvi_in_l/XST_VCC
+GND 		fmc_dvidp_dvi_out_l/XST_GND
+VCC 		fmc_dvidp_dvi_out_l/XST_VCC
+
+To enable printing of redundant blocks removed and signals merged, set the
+detailed map report option and rerun map.
+
+Section 6 - IOB Properties
+--------------------------
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| IOB Name                           | Type             | Direction | IO Standard          | Diff  | Drive    | Slew | Reg (s)      | Resistor | IOB      |
+|                                    |                  |           |                      | Term  | Strength | Rate |              |          | Delay    |
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| clk_100mhz                         | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| fmc_dvidp_dvii_blue<0>             | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| fmc_dvidp_dvii_blue<1>             | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| fmc_dvidp_dvii_blue<2>             | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| fmc_dvidp_dvii_blue<3>             | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| fmc_dvidp_dvii_blue<4>             | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| fmc_dvidp_dvii_blue<5>             | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| fmc_dvidp_dvii_blue<6>             | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| fmc_dvidp_dvii_blue<7>             | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| fmc_dvidp_dvii_clk                 | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| fmc_dvidp_dvii_de                  | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| fmc_dvidp_dvii_green<0>            | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| fmc_dvidp_dvii_green<1>            | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| fmc_dvidp_dvii_green<2>            | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| fmc_dvidp_dvii_green<3>            | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| fmc_dvidp_dvii_green<4>            | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| fmc_dvidp_dvii_green<5>            | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| fmc_dvidp_dvii_green<6>            | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| fmc_dvidp_dvii_green<7>            | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| fmc_dvidp_dvii_hsync               | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| fmc_dvidp_dvii_red<0>              | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| fmc_dvidp_dvii_red<1>              | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| fmc_dvidp_dvii_red<2>              | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| fmc_dvidp_dvii_red<3>              | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| fmc_dvidp_dvii_red<4>              | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| fmc_dvidp_dvii_red<5>              | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| fmc_dvidp_dvii_red<6>              | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| fmc_dvidp_dvii_red<7>              | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| fmc_dvidp_dvii_vsync               | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| fmc_dvidp_dvio_clk                 | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | ODDR         |          |          |
+|                                    |                  |           |                      |       |          |      | TDDR         |          |          |
+| fmc_dvidp_dvio_data<0>             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | ODDR         |          |          |
+|                                    |                  |           |                      |       |          |      | TDDR         |          |          |
+| fmc_dvidp_dvio_data<1>             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | ODDR         |          |          |
+|                                    |                  |           |                      |       |          |      | TDDR         |          |          |
+| fmc_dvidp_dvio_data<2>             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | ODDR         |          |          |
+|                                    |                  |           |                      |       |          |      | TDDR         |          |          |
+| fmc_dvidp_dvio_data<3>             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | ODDR         |          |          |
+|                                    |                  |           |                      |       |          |      | TDDR         |          |          |
+| fmc_dvidp_dvio_data<4>             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | ODDR         |          |          |
+|                                    |                  |           |                      |       |          |      | TDDR         |          |          |
+| fmc_dvidp_dvio_data<5>             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | ODDR         |          |          |
+|                                    |                  |           |                      |       |          |      | TDDR         |          |          |
+| fmc_dvidp_dvio_data<6>             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | ODDR         |          |          |
+|                                    |                  |           |                      |       |          |      | TDDR         |          |          |
+| fmc_dvidp_dvio_data<7>             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | ODDR         |          |          |
+|                                    |                  |           |                      |       |          |      | TDDR         |          |          |
+| fmc_dvidp_dvio_data<8>             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | ODDR         |          |          |
+|                                    |                  |           |                      |       |          |      | TDDR         |          |          |
+| fmc_dvidp_dvio_data<9>             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | ODDR         |          |          |
+|                                    |                  |           |                      |       |          |      | TDDR         |          |          |
+| fmc_dvidp_dvio_data<10>            | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | ODDR         |          |          |
+|                                    |                  |           |                      |       |          |      | TDDR         |          |          |
+| fmc_dvidp_dvio_data<11>            | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | ODDR         |          |          |
+|                                    |                  |           |                      |       |          |      | TDDR         |          |          |
+| fmc_dvidp_dvio_de                  | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fmc_dvidp_dvio_hsync               | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fmc_dvidp_dvio_reset_n             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fmc_dvidp_dvio_vsync               | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fmc_dvidp_i2c_rst                  | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fmc_dvidp_i2c_scl                  | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              | PULLUP   |          |
+| fmc_dvidp_i2c_sda                  | IOB              | BIDIR     | LVCMOS25             |       | 12       | SLOW |              | PULLUP   |          |
+| fmc_dvidp_tp1                      | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fmc_dvidp_tp2                      | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| fmc_dvidp_tp3                      | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| led<0>                             | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| led<1>                             | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| led<2>                             | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| led<3>                             | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| led<4>                             | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| led<5>                             | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| led<6>                             | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| led<7>                             | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| push_buttons<0>                    | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| push_buttons<1>                    | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| push_buttons<2>                    | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| push_buttons<3>                    | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| switch<0>                          | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| switch<1>                          | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| switch<2>                          | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| switch<3>                          | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| switch<4>                          | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| switch<5>                          | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| switch<6>                          | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| switch<7>                          | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+Section 7 - RPMs
+----------------
+
+Section 8 - Guide Report
+------------------------
+Guide not run on this design.
+
+Section 9 - Area Group and Partition Summary
+--------------------------------------------
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+Area Group Information
+----------------------
+
+  No area groups were found in this design.
+
+----------------------
+
+Section 10 - Timing Report
+--------------------------
+A logic-level (pre-route) timing report can be generated by using Xilinx static
+timing analysis tools, Timing Analyzer (GUI) or TRCE (command line), with the
+mapped NCD and PCF files. Please note that this timing report will be generated
+using estimated delay information. For accurate numbers, please generate a
+timing report with the post Place and Route NCD file.
+
+For more information about the Timing Analyzer, consult the Xilinx Timing
+Analyzer Reference Manual; for more information about TRCE, consult the Xilinx
+Command Line Tools User Guide "TRACE" chapter.
+
+Section 11 - Configuration String Details
+-----------------------------------------
+Use the "-detail" map option to print out Configuration Strings
+
+Section 12 - Control Set Information
+------------------------------------
+Use the "-detail" map option to print out Control Set Information.
+
+Section 13 - Utilization by Hierarchy
+-------------------------------------
+Use the "-detail" map option to print out the Utilization by Hierarchy section.

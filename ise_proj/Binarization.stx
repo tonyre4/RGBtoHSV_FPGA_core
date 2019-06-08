@@ -1,0 +1,57 @@
+Release 14.2 - xst P.28xd (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to C:/Users/Jeaneth/Desktop/Como usar System Generator/Avnet-AES-S6IVK-LX150T-G-FMCDVI_DVI_Pass_Through_Demo_ISE_Design_Suite_12_2/FMCDVI_DVI_Pass_Through_Demo_12_2_20100921/vhdl/ise_s6ivk/xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.16 secs
+ 
+--> Parameter xsthdpdir set to C:/Users/Jeaneth/Desktop/Como usar System Generator/Avnet-AES-S6IVK-LX150T-G-FMCDVI_DVI_Pass_Through_Demo_ISE_Design_Suite_12_2/FMCDVI_DVI_Pass_Through_Demo_12_2_20100921/vhdl/ise_s6ivk/xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.16 secs
+ 
+--> Reading design: Binarization.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "C:\Users\Jeaneth\Desktop\Como usar System Generator\Avnet-AES-S6IVK-LX150T-G-FMCDVI_DVI_Pass_Through_Demo_ISE_Design_Suite_12_2\FMCDVI_DVI_Pass_Through_Demo_12_2_20100921\vhdl\ise_s6ivk\Binarization.vhd" into library work
+Parsing entity <Binarization>.
+Parsing architecture <Behavioral> of entity <binarization>.
+
+
+Total REAL time to Xst completion: 5.00 secs
+Total CPU time to Xst completion: 5.02 secs
+ 
+--> 
+
+Total memory usage is 176468 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

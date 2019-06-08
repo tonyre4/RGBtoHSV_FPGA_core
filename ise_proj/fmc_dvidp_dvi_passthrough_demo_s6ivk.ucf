@@ -1,0 +1,122 @@
+##############################################################################
+# Clock & Reset Input
+##############################################################################
+
+## Clock constraints
+NET  clk_100mhz  LOC = U23  | IOSTANDARD = LVCMOS25;
+
+Net clk_100mhz TNM_NET = sys_clk;
+TIMESPEC TS_sys_clk = PERIOD sys_clk 10000 ps;
+
+
+## Reset constraints
+#Net reset TIG;
+#Net reset LOC= M19 | IOSTANDARD = LVCMOS15;
+
+
+###########################################
+# Push-buttons
+###########################################
+Net push_buttons[0]  LOC = M19 | IOSTANDARD = LVCMOS25;
+Net push_buttons[1]  LOC = L20 | IOSTANDARD = LVCMOS25;
+Net push_buttons[2]  LOC = L21 | IOSTANDARD = LVCMOS25;
+Net push_buttons[3]  LOC = H20 | IOSTANDARD = LVCMOS25;
+
+###########################################
+# FMC
+###########################################
+#NET fmc_ipmi_i2c_scl		LOC = AB3 | SLEW = SLOW | TIG | IOSTANDARD = LVCMOS33;
+#NET fmc_ipmi_i2c_sda		LOC = AB1 | SLEW = SLOW | TIG | IOSTANDARD = LVCMOS33;
+
+##########################   Switches/Push Buttons   ########################
+NET SWITCH[0]              LOC = K21  | IOSTANDARD = LVCMOS25;  # "SWITCH0"
+NET SWITCH[1]              LOC = G23  | IOSTANDARD = LVCMOS25;  # "SWITCH1"
+NET SWITCH[2]              LOC = G24  | IOSTANDARD = LVCMOS25;  # "SWITCH2"
+NET SWITCH[3]              LOC = J20  | IOSTANDARD = LVCMOS25;  # "SWITCH3"
+NET SWITCH[4]              LOC = J22  | IOSTANDARD = LVCMOS25;  # "SWITCH4"
+NET SWITCH[5]              LOC = E24  | IOSTANDARD = LVCMOS25;  # "SWITCH5"
+NET SWITCH[6]              LOC = E23  | IOSTANDARD = LVCMOS25;  # "SWITCH6"
+NET SWITCH[7]              LOC = K22  | IOSTANDARD = LVCMOS25;  # "SWITCH7"
+
+##########################   LEDs   #####################################
+
+NET LED[0]                 LOC = M18  | IOSTANDARD = LVCMOS33;  # "LED0"
+NET LED[1]                 LOC = L19  | IOSTANDARD = LVCMOS33;  # "LED1"
+NET LED[2]                 LOC = M21  | IOSTANDARD = LVCMOS33;  # "LED2"
+NET LED[3]                 LOC = F22  | IOSTANDARD = LVCMOS33;  # "LED3"
+NET LED[4]                 LOC = H22  | IOSTANDARD = LVCMOS33;  # "LED4"
+NET LED[5]                 LOC = C25  | IOSTANDARD = LVCMOS33;  # "LED5"
+NET LED[6]                 LOC = C26  | IOSTANDARD = LVCMOS33;  # "LED6"
+NET LED[7]                 LOC = F23  | IOSTANDARD = LVCMOS33;  # "LED7"
+
+###########################################
+# FMC-DVIDP - I2C
+###########################################
+Net fmc_dvidp_i2c_scl LOC = AB21 | SLEW = SLOW | TIG | PULLUP; # FMC2 - D15 (LA09_N)
+Net fmc_dvidp_i2c_sda LOC = AA21 | SLEW = SLOW | TIG | PULLUP; # FMC2 - D14 (LA09_P)
+Net fmc_dvidp_i2c_rst LOC =  W17; # FMC2 - G15 (LA12_P)
+
+###########################################
+# FMC-DVIDP - DVI Input
+###########################################
+Net fmc_dvidp_dvii_clk          LOC = W14; # FMC2 - D20 (LA17_P_CC)
+TIMESPEC TS_fmc_dvidp_dvii_clk = PERIOD fmc_dvidp_dvii_clk 6.0 ns; # 162 MHz
+#TIMESPEC TS_fmc_dvidp_dvii_clk = PERIOD fmc_dvidp_dvii_clk 15.0 ns; # 162 MHz
+NET fmc_dvidp_dvii_clk          CLOCK_DEDICATED_ROUTE = FALSE;
+Net fmc_dvidp_dvii_de           LOC = Y16; # FMC2 - C15 (LA10_N)
+Net fmc_dvidp_dvii_vsync        LOC = W18; # FMC2 - G16 (LA12_N)
+Net fmc_dvidp_dvii_hsync        LOC = U13; # FMC2 - H16 (LA11_P)
+Net fmc_dvidp_dvii_blue[0]      LOC = V23; # FMC2 - G27 (LA25_P)
+Net fmc_dvidp_dvii_blue[1]      LOC = R26; # FMC2 - H26 (LA21_N)
+Net fmc_dvidp_dvii_blue[2]      LOC =AE25; # FMC2 - D26 (LA26_P)
+Net fmc_dvidp_dvii_blue[3]      LOC = Y24; # FMC2 - C26 (LA27_P)
+Net fmc_dvidp_dvii_blue[4]      LOC = Y11; # FMC2 - D24 (LA23_N)
+Net fmc_dvidp_dvii_blue[5]      LOC = T20; # FMC2 - G25 (LA22_N)
+Net fmc_dvidp_dvii_blue[6]      LOC = T19; # FMC2 - G24 (LA22_P)
+Net fmc_dvidp_dvii_blue[7]      LOC = U24; # FMC2 - H25 (LA21_P)
+Net fmc_dvidp_dvii_green[0]     LOC = Y17; # FMC2 - H23 (LA19_N)
+Net fmc_dvidp_dvii_green[1]     LOC = AC5; # FMC2 - D23 (LA23_P)
+Net fmc_dvidp_dvii_green[2]     LOC = U25; # FMC2 - C22 (LA18_P_CC)
+Net fmc_dvidp_dvii_green[3]     LOC = Y13; # FMC2 - D21 (LA17_N_CC)
+Net fmc_dvidp_dvii_green[4]     LOC =AC23; # FMC2 - G22 (LA20_N)
+Net fmc_dvidp_dvii_green[5]     LOC =AA17; # FMC2 - G21 (LA20_P)
+Net fmc_dvidp_dvii_green[6]     LOC = W20; # FMC2 - H22 (LA19_P)
+Net fmc_dvidp_dvii_green[7]     LOC = V16; # FMC2 - H20 (LA15_N)
+Net fmc_dvidp_dvii_red[0]       LOC = U15; # FMC2 - H19 (LA15_P)
+Net fmc_dvidp_dvii_red[1]       LOC = AA6; # FMC2 - G19 (LA16_N)
+Net fmc_dvidp_dvii_red[2]       LOC =AA16; # FMC2 - C19 (LA14_N)
+Net fmc_dvidp_dvii_red[3]       LOC = Y15; # FMC2 - C18 (LA14_P)
+Net fmc_dvidp_dvii_red[4]       LOC =AB15; # FMC2 - D18 (LA13_N)
+Net fmc_dvidp_dvii_red[5]       LOC = AA7; # FMC2 - G18 (LA16_P)
+Net fmc_dvidp_dvii_red[6]       LOC = V13; # FMC2 - H17 (LA11_N)
+Net fmc_dvidp_dvii_red[7]       LOC =AA15; # FMC2 - D17 (LA13_P)
+
+###########################################
+# FMC-DVIDP - DVI Output
+###########################################
+Net fmc_dvidp_dvio_clk          LOC = U26; # FMC2 - C23 (LA18_N_CC)
+Net fmc_dvidp_dvio_reset_n      LOC = U20; # FMC2 - G37 (LA33_N)
+Net fmc_dvidp_dvio_de           LOC = T23; # FMC2 - H35 (LA30_N)
+Net fmc_dvidp_dvio_vsync        LOC = U19; # FMC2 - G36 (LA33_P)
+Net fmc_dvidp_dvio_hsync        LOC = U21; # FMC2 - H37 (LA32_P)
+Net fmc_dvidp_dvio_data[0]      LOC =AD26; # FMC2 - G34 (LA31_N)
+Net fmc_dvidp_dvio_data[1]      LOC =AD24; # FMC2 - G33 (LA31_P)
+Net fmc_dvidp_dvio_data[2]      LOC = T22; # FMC2 - H34 (LA30_P)
+Net fmc_dvidp_dvio_data[3]      LOC =AC26; # FMC2 - H32 (LA28_N)
+Net fmc_dvidp_dvio_data[4]      LOC =AA24; # FMC2 - G31 (LA29_N)
+Net fmc_dvidp_dvio_data[5]      LOC =AA23; # FMC2 - G30 (LA29_P)
+Net fmc_dvidp_dvio_data[6]      LOC =AC25; # FMC2 - H31 (LA28_P)
+Net fmc_dvidp_dvio_data[7]      LOC =AB26; # FMC2 - H29 (LA24_N)
+Net fmc_dvidp_dvio_data[8]      LOC =AB24; # FMC2 - H28 (LA24_P)
+Net fmc_dvidp_dvio_data[9]      LOC = W24; # FMC2 - G28 (LA25_N)
+Net fmc_dvidp_dvio_data[10]     LOC = Y26; # FMC2 - C27 (LA27_N)
+Net fmc_dvidp_dvio_data[11]     LOC =AE26; # FMC2 - D27 (LA26_N)
+
+###########################################
+# FMC-DVIDP - Test Points
+###########################################
+Net fmc_dvidp_tp1 LOC = Y12 | TIG; # FMC2 - D11 (LA05_P)
+Net fmc_dvidp_tp2 LOC =AA12 | TIG; # FMC2 - D12 (LA05_N)
+Net fmc_dvidp_tp3 LOC = W16 | TIG; # FMC2 - C14 (LA10_P)
+
+

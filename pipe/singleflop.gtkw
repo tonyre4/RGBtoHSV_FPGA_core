@@ -1,0 +1,26 @@
+[*]
+[*] GTKWave Analyzer v3.3.86 (w)1999-2017 BSI
+[*] Sat Jun  8 17:50:49 2019
+[*]
+[dumpfile] "/home/eansalab/Documents/Carlitos/RGBtoHSV_FPGA_core/pipe/test.vcd"
+[dumpfile_mtime] "Sat Jun  8 17:50:14 2019"
+[dumpfile_size] 2197
+[savefile] "/home/eansalab/Documents/Carlitos/RGBtoHSV_FPGA_core/pipe/singleflop.gtkw"
+[timestart] 0
+[size] 1000 600
+[pos] -1 -1
+*-26.518841 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[sst_width] 223
+[signals_width] 102
+[sst_expanded] 1
+[sst_vpaned_height] 152
+@29
+pipetb.write_on
+@28
+pipetb.clk
+pipetb.rst
+@22
+pipetb.in1[7:0]
+pipetb.out1[7:0]
+[pattern_trace] 1
+[pattern_trace] 0

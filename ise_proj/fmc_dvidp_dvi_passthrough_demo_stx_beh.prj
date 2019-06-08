@@ -1,0 +1,6 @@
+vhdl isim_temp "../../../divider.vhdl"
+vhdl isim_temp "../../../rgbtohsv.vhdl"
+vhdl isim_temp "../rtl/fmc_dvidp/fmc_dvidp_dvi_out.vhd"
+vhdl isim_temp "../rtl/fmc_dvidp/fmc_dvidp_dvi_in.vhd"
+vhdl isim_temp "../rtl/top/fmc_dvidp_dvi_passthrough_demo_s6ivk.vhd"
+verilog isim_temp "/opt/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"

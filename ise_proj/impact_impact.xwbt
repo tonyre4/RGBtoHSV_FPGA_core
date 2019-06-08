@@ -1,0 +1,8 @@
+INTSTYLE=impact
+INFILE=/home/eansalab/Documents/Carlitos/RGBtoHSV_FPGA_core/ise_proj/impact.xsl
+OUTFILE=/home/eansalab/Documents/Carlitos/RGBtoHSV_FPGA_core/ise_proj/impact.xsl
+FAMILY=Multiple
+PART=Multiple
+WORKINGDIR=/home/eansalab/Documents/Carlitos/RGBtoHSV_FPGA_core/ise_proj
+LICENSE=iMPACT
+USER_INFO=iMPACT

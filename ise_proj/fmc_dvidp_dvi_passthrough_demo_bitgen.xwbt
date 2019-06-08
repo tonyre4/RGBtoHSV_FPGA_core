@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=/home/eansalab/Documents/Carlitos/RGBtoHSV_FPGA_core/ise_proj/fmc_dvidp_dvi_passthrough_demo.ncd
+OUTFILE=/home/eansalab/Documents/Carlitos/RGBtoHSV_FPGA_core/ise_proj/fmc_dvidp_dvi_passthrough_demo.bit
+FAMILY=Spartan6
+PART=xc6slx150t-3fgg676
+WORKINGDIR=/home/eansalab/Documents/Carlitos/RGBtoHSV_FPGA_core/ise_proj
+LICENSE=ISE
+USER_INFO=__0_0_0

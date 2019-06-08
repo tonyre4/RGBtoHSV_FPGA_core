@@ -1,0 +1,29 @@
+Release 14.7 Drc P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Fri Jun  7 17:36:13 2019
+
+drc -z fmc_dvidp_dvi_passthrough_demo.ncd fmc_dvidp_dvi_passthrough_demo.pcf
+
+WARNING:PhysDesignRules:367 - The signal
+   <cconv/S1/Auns[13]_Buns[7]_div_2/GLOBAL_LOGIC0> is incomplete. The signal
+   does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <cconv/S0/Auns[13]_Buns[7]_div_2/GLOBAL_LOGIC0> is incomplete. The signal
+   does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <cconv/S5/Auns[13]_Buns[7]_div_2/GLOBAL_LOGIC0> is incomplete. The signal
+   does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <cconv/S4/Auns[13]_Buns[7]_div_2/GLOBAL_LOGIC0> is incomplete. The signal
+   does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <cconv/S3/Auns[13]_Buns[7]_div_2/GLOBAL_LOGIC0> is incomplete. The signal
+   does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <cconv/S2/Auns[13]_Buns[7]_div_2/GLOBAL_LOGIC0> is incomplete. The signal
+   does not drive any load pins in the design.
+WARNING:PhysDesignRules:781 - PULLUP on an active net. PULLUP of comp
+   fmc_dvidp_i2c_scl_PULLUP is set but the tri state is not configured. 
+DRC detected 0 errors and 7 warnings.  Please see the previously displayed
+individual error or warning messages for more details.

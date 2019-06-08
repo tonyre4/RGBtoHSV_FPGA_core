@@ -1,0 +1,1271 @@
+Release 14.7 - xst P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.04 secs
+ 
+--> 
+Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.05 secs
+ 
+--> 
+Reading design: fmc_dvidp_dvi_passthrough_demo.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "fmc_dvidp_dvi_passthrough_demo.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "fmc_dvidp_dvi_passthrough_demo"
+Output Format                      : NGC
+Target Device                      : xc6slx150t-3-fgg676
+
+---- Source Options
+Top Module Name                    : fmc_dvidp_dvi_passthrough_demo
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : Yes
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "/home/eansalab/Documents/Carlitos/RGBtoHSV_FPGA_core/ise_proj/PB_FMC_DVIDP_CONFIG.v" into library work
+Parsing module <PB_FMC_DVIDP_CONFIG>.
+Analyzing Verilog file "/home/eansalab/Documents/Carlitos/RGBtoHSV_FPGA_core/ise_proj/kcpsm3.v" into library work
+Parsing module <kcpsm3>.
+Analyzing Verilog file "/home/eansalab/Documents/Carlitos/RGBtoHSV_FPGA_core/ise_proj/FMC_DVIDP_CONFIG.v" into library work
+Parsing module <FMC_DVIDP_CONFIG>.
+Parsing VHDL file "/home/eansalab/Documents/Carlitos/RGBtoHSV_FPGA_core/divider.vhdl" into library work
+Parsing entity <divider>.
+Parsing architecture <behaviorial> of entity <divider>.
+Parsing architecture <simple> of entity <divider>.
+Parsing VHDL file "/home/eansalab/Documents/Carlitos/RGBtoHSV_FPGA_core/rgbtohsv.vhdl" into library work
+Parsing entity <RGBtoHSV>.
+Parsing architecture <paper> of entity <rgbtohsv>.
+Parsing architecture <complex> of entity <rgbtohsv>.
+Parsing architecture <complex2> of entity <rgbtohsv>.
+Parsing architecture <simplest> of entity <rgbtohsv>.
+Parsing VHDL file "/home/eansalab/Documents/Carlitos/RGBtoHSV_FPGA_core/ise_proj/videoMux.vhdl" into library work
+Parsing entity <videoMux>.
+Parsing architecture <vM> of entity <videomux>.
+Parsing VHDL file "/home/eansalab/Documents/Carlitos/RGBtoHSV_FPGA_core/ise_proj/fmc_dvidp_dvi_out.vhd" into library work
+Parsing entity <fmc_dvidp_dvi_out>.
+Parsing architecture <IMP> of entity <fmc_dvidp_dvi_out>.
+Parsing VHDL file "/home/eansalab/Documents/Carlitos/RGBtoHSV_FPGA_core/ise_proj/fmc_dvidp_dvi_in.vhd" into library work
+Parsing entity <fmc_dvidp_dvi_in>.
+Parsing architecture <IMP> of entity <fmc_dvidp_dvi_in>.
+Parsing VHDL file "/home/eansalab/Documents/Carlitos/RGBtoHSV_FPGA_core/ise_proj/fmc_dvidp_dvi_passthrough_demo_s6ivk.vhd" into library work
+Parsing entity <fmc_dvidp_dvi_passthrough_demo>.
+Parsing architecture <IMP> of entity <fmc_dvidp_dvi_passthrough_demo>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <fmc_dvidp_dvi_passthrough_demo> (architecture <IMP>) from library <work>.
+Going to verilog side to elaborate module FMC_DVIDP_CONFIG
+
+Elaborating module <FMC_DVIDP_CONFIG>.
+
+Elaborating module <PB_FMC_DVIDP_CONFIG>.
+
+Elaborating module
+<RAMB16_S18_S18(INIT_00=256'b0100000000000011010000000000111100000000001011110000000000100110000000000010000000000000000100110100000000001111010000000000101000010100000000001010000000011100010000000000001001010000000000101010000000001000010000000000001100000000000100110100000000000101,INIT_01=256'b1010000000000000000000001100100000001010011001001100000000000000000000000000000000000000110010000000101001100100110000000000000000000000000000010000000011001000000010100110010011000000000000000000000000000000010000000000001001010100000011111010000000001000,INIT_02=256'b01110000101000000000000000000000001110000000011000000100000001010000001000000000001110000000011011110001000001010000011011100000000100010000000001000000101000000000000000000000001110000000011000000100000001010000010011100000000100010000000011100000,INIT_03=256'b0111010010000101000000010001100001010000101101000000000000101001000000010000000001110100011010000001000100000000101000001010000000000000000000000011100000000110000100000000010100001010000000000
+0111000000001101011001100000101000010001110000000010001,INIT_04=256'b01100001110000101101000000000000101001000000010000000001110100100001010000000100011000010100001011010000000000001010010000000100000000011101000110100000010001000000001010000010100000000000000000000001111001000110000110000010110100000000000010100100000001,INIT_05=256'b0110000000010000000000000111010001101000000100101011000000000000010000000000000001100000000100001011010000000000001010010000000100000000011101000110100000010001000000001010000010100000000000000000000001111001000110000110000010110100000000000000000001110100,INIT_06=256'b0100000001111100000010001111111100001001000000001010000000000000000000000111010011001000000000010110100000010001000000001010000010110100000000000010100100000001000000000101010110100000000000000000000001110100011010000001001110110000000000000100000000000001,INIT_07=256'b010000100000000110000000010000100001000000101100010000000001111100000010010000000101000000101100011011000000000000001010010000000100000000011111000
+0001001000000010100000010110001000000000111110000001000111111110000100100000001,INIT_08=256'b0101010001111101110000010000000100000000101111100000101000000101110000000000000100000000000010001101100000000000101000000000000101000000000000010000000010111110000010100000101011000000000000010000000000001100000000001011111000001010000001011100000000000001,INIT_09=256'b1010000000000000000000001011111000001010000001011100000000000001000000000000100001001001000000010000000010111110000010100000101011000000000000010000000000001100000000001011111000001010000001011100000000000001110000000000001010100000000000010001000010010000,INIT_0A=256'b010111110000010100000010111000000000000010000000000001000000000001011111000001010000001011100000000000001000000000000001000000000101111100000101000000101110000000000000100000000000011000000000010111110000010100000010111000000000000010000000000000011,INIT_0B=256'b11001011000001100000101100001100101000000000000000000000101111100000101000000101110000000000000100000000000000110000000010111110
+00001010000001011100000000000001000000000000110000000000101111100000101000000101110000000000000100000000000000101010000000000000,INIT_0C=256'b010111110000010101111101000000000101111100000101011111010000000001011111000001010111110100000000010111110000010101111101010100000000000000101010010111110110010100000000101010100110000111100101100000010110010110000000101010000110000110010101100000001,INIT_0D=256'b01000000000000000101000000000000001010100110010001100000000000001,INIT_0E=256'b0,INIT_0F=256'b0,INIT_10=256'b0,INIT_11=256'b0,INIT_12=256'b0,INIT_13=256'b0,INIT_14=256'b0,INIT_15=256'b0,INIT_16=256'b0,INIT_17=256'b0,INIT_18=256'b0,INIT_19=256'b0,INIT_1A=256'b0,INIT_1B=256'b0,INIT_1C=256'b0,INIT_1D=256'b0,INIT_1E=256'b0,INIT_1F=256'b0,INIT_20=256'b0,INIT_21=256'b0,INIT_22=256'b0,INIT_23=256'b0,INIT_24=256'b0,INIT_25=256'b0,INIT_26=256'b0,INIT_27=256'b0,INIT_28=256'b0,INIT_29=256'b0,INIT_2A=256'b0,INIT_2B=256'b0,INIT_2C=256'b0,INIT_2D=256'b0,INIT_2E=256'b0,INIT_2F=256'b0,INIT_30=256'b0,INIT_31=256'b0,INIT_32=256'b
+0,INIT_33=256'b0,INIT_34=256'b0,INIT_35=256'b0,INIT_36=256'b0,INIT_37=256'b0,INIT_38=256'b0,INIT_39=256'b0,INIT_3A=256'b0,INIT_3B=256'b0,INIT_3C=256'b0,INIT_3D=256'b0,INIT_3E=256'b0,INIT_3F=256'b0100000011010011000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000,INITP_00=256'b1000100011110011100111001111000011000010110000111001111011001001001100100100100111001110110010110010011101001001110011101100100111010010011100111011000011000010001011000011000010001011000010001011001000110010001100100011110000111111111111110000001100001111,INITP_01=256'b0111011011100110011001100101101110101110101001011001000110010001100100010110010001100100011001000110010001011001000001100100011001000000011011100100000000011001000110010,INITP_02=256'b0,INITP_03=256'b0,INITP_04=256'b0,INITP_05=256'b0,INITP_06=256'b0,INITP_07=256'b11000000000000000000000
+00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000>.
+WARNING:HDLCompiler:189 - "/home/eansalab/Documents/Carlitos/RGBtoHSV_FPGA_core/ise_proj/FMC_DVIDP_CONFIG.v" Line 120: Size mismatch in connection of port <LOAD_ADDRESS>. Formal port size is 10-bit while actual signal size is 9-bit.
+
+Elaborating module <kcpsm3>.
+
+Elaborating module <LUT2(INIT=4'b01)>.
+
+Elaborating module <FD>.
+
+Elaborating module <FDS>.
+
+Elaborating module <FDR>.
+
+Elaborating module <LUT4(INIT=16'b010000000)>.
+
+Elaborating module <FDE>.
+
+Elaborating module <LUT4(INIT=16'b1110101010101010)>.
+
+Elaborating module <LUT3(INIT=8'b0100)>.
+
+Elaborating module <FDRE>.
+
+Elaborating module <LUT4(INIT=16'b0111010000000000)>.
+
+Elaborating module <LUT4(INIT=16'b0101101000111100)>.
+
+Elaborating module <LUT3(INIT=8'b0101111)>.
+
+Elaborating module <LUT4(INIT=16'b01000000000000)>.
+
+Elaborating module <LUT4(INIT=16'b0101010000000000)>.
+
+Elaborating module <LUT2(INIT=4'b1101)>.
+
+Elaborating module <LUT4(INIT=16'b0100000111111100)>.
+
+Elaborating module <LUT2(INIT=4'b1000)>.
+
+Elaborating module <LUT4(INIT=16'b01)>.
+
+Elaborating module <MUXCY>.
+
+Elaborating module <LUT3(INIT=8'b0111111)>.
+
+Elaborating module <XORCY>.
+
+Elaborating module <LUT4(INIT=16'b0110100110010110)>.
+
+Elaborating module <LUT4(INIT=16'b1111001111111111)>.
+
+Elaborating module <LUT3(INIT=8'b11110011)>.
+
+Elaborating module <LUT2(INIT=4'b1100)>.
+
+Elaborating module <LUT2(INIT=4'b011)>.
+
+Elaborating module <INV>.
+
+Elaborating module <FDRSE>.
+
+Elaborating module <LUT3(INIT=8'b11100100)>.
+
+Elaborating module <LUT4(INIT=16'b0101000101)>.
+
+Elaborating module <RAM16X1D(INIT=16'b0)>.
+
+Elaborating module <LUT4(INIT=16'b010000000000)>.
+
+Elaborating module <LUT4(INIT=16'b1000000000000000)>.
+
+Elaborating module <RAM64X1S(INIT=64'b0)>.
+
+Elaborating module <LUT4(INIT=16'b1111111111100010)>.
+
+Elaborating module <LUT4(INIT=16'b0110111010001010)>.
+
+Elaborating module <MUXF5>.
+
+Elaborating module <LUT3(INIT=8'b011111)>.
+
+Elaborating module <LUT3(INIT=8'b01101100)>.
+
+Elaborating module <LUT3(INIT=8'b10010110)>.
+
+Elaborating module <LUT2(INIT=4'b010)>.
+
+Elaborating module <LUT4(INIT=16'b010)>.
+
+Elaborating module <LUT3(INIT=8'b11111110)>.
+
+Elaborating module <LUT4(INIT=16'b010000)>.
+
+Elaborating module <LUT4(INIT=16'b0100000000000000)>.
+
+Elaborating module <LUT4(INIT=16'b0100000000)>.
+
+Elaborating module <RAM32X1S(INIT=32'b0)>.
+
+Elaborating module <LUT4(INIT=16'b0110010101010101)>.
+
+Elaborating module <LUT4(INIT=16'b1010100110011001)>.
+WARNING:HDLCompiler:1127 - "/home/eansalab/Documents/Carlitos/RGBtoHSV_FPGA_core/ise_proj/FMC_DVIDP_CONFIG.v" Line 128: Assignment to interrupt_ack ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/eansalab/Documents/Carlitos/RGBtoHSV_FPGA_core/ise_proj/FMC_DVIDP_CONFIG.v" Line 131: Assignment to rd_strobe ignored, since the identifier is never used
+Back to vhdl to continue elaboration
+
+Elaborating entity <fmc_dvidp_dvi_in> (architecture <IMP>) from library <work>.
+
+Elaborating entity <RGBtoHSV> (architecture <simplest>) from library <work>.
+
+Elaborating entity <divider> (architecture <simple>) with generics from library <work>.
+
+Elaborating entity <divider> (architecture <simple>) with generics from library <work>.
+
+Elaborating entity <videoMux> (architecture <vM>) from library <work>.
+WARNING:HDLCompiler:92 - "/home/eansalab/Documents/Carlitos/RGBtoHSV_FPGA_core/ise_proj/videoMux.vhdl" Line 52: rgb should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/eansalab/Documents/Carlitos/RGBtoHSV_FPGA_core/ise_proj/videoMux.vhdl" Line 53: rgb should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/eansalab/Documents/Carlitos/RGBtoHSV_FPGA_core/ise_proj/videoMux.vhdl" Line 54: rgb should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/eansalab/Documents/Carlitos/RGBtoHSV_FPGA_core/ise_proj/videoMux.vhdl" Line 56: rgb should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/eansalab/Documents/Carlitos/RGBtoHSV_FPGA_core/ise_proj/videoMux.vhdl" Line 57: rgb should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/eansalab/Documents/Carlitos/RGBtoHSV_FPGA_core/ise_proj/videoMux.vhdl" Line 58: rgb should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/eansalab/Documents/Carlitos/RGBtoHSV_FPGA_core/ise_proj/videoMux.vhdl" Line 60: rgb should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/eansalab/Documents/Carlitos/RGBtoHSV_FPGA_core/ise_proj/videoMux.vhdl" Line 61: rgb should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/eansalab/Documents/Carlitos/RGBtoHSV_FPGA_core/ise_proj/videoMux.vhdl" Line 62: rgb should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/eansalab/Documents/Carlitos/RGBtoHSV_FPGA_core/ise_proj/videoMux.vhdl" Line 64: rgb should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/eansalab/Documents/Carlitos/RGBtoHSV_FPGA_core/ise_proj/videoMux.vhdl" Line 65: rgb should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/eansalab/Documents/Carlitos/RGBtoHSV_FPGA_core/ise_proj/videoMux.vhdl" Line 66: rgb should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/eansalab/Documents/Carlitos/RGBtoHSV_FPGA_core/ise_proj/videoMux.vhdl" Line 68: hsv should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/eansalab/Documents/Carlitos/RGBtoHSV_FPGA_core/ise_proj/videoMux.vhdl" Line 69: hsv should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/eansalab/Documents/Carlitos/RGBtoHSV_FPGA_core/ise_proj/videoMux.vhdl" Line 70: hsv should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/eansalab/Documents/Carlitos/RGBtoHSV_FPGA_core/ise_proj/videoMux.vhdl" Line 72: hsv should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/eansalab/Documents/Carlitos/RGBtoHSV_FPGA_core/ise_proj/videoMux.vhdl" Line 73: hsv should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/eansalab/Documents/Carlitos/RGBtoHSV_FPGA_core/ise_proj/videoMux.vhdl" Line 74: hsv should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/eansalab/Documents/Carlitos/RGBtoHSV_FPGA_core/ise_proj/videoMux.vhdl" Line 76: hsv should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/eansalab/Documents/Carlitos/RGBtoHSV_FPGA_core/ise_proj/videoMux.vhdl" Line 77: hsv should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/eansalab/Documents/Carlitos/RGBtoHSV_FPGA_core/ise_proj/videoMux.vhdl" Line 78: hsv should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/eansalab/Documents/Carlitos/RGBtoHSV_FPGA_core/ise_proj/videoMux.vhdl" Line 80: hsv should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/eansalab/Documents/Carlitos/RGBtoHSV_FPGA_core/ise_proj/videoMux.vhdl" Line 81: hsv should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/eansalab/Documents/Carlitos/RGBtoHSV_FPGA_core/ise_proj/videoMux.vhdl" Line 82: hsv should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/eansalab/Documents/Carlitos/RGBtoHSV_FPGA_core/ise_proj/videoMux.vhdl" Line 84: rgb should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/eansalab/Documents/Carlitos/RGBtoHSV_FPGA_core/ise_proj/videoMux.vhdl" Line 85: rgb should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/eansalab/Documents/Carlitos/RGBtoHSV_FPGA_core/ise_proj/videoMux.vhdl" Line 86: rgb should be on the sensitivity list of the process
+
+Elaborating entity <fmc_dvidp_dvi_out> (architecture <IMP>) with generics from library <work>.
+WARNING:HDLCompiler:321 - "/home/eansalab/Documents/Carlitos/RGBtoHSV_FPGA_core/ise_proj/fmc_dvidp_dvi_out.vhd" Line 210: Comparison between arrays of unequal length always returns FALSE.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <fmc_dvidp_dvi_passthrough_demo>.
+    Related source file is "/home/eansalab/Documents/Carlitos/RGBtoHSV_FPGA_core/ise_proj/fmc_dvidp_dvi_passthrough_demo_s6ivk.vhd".
+INFO:Xst:3210 - "/home/eansalab/Documents/Carlitos/RGBtoHSV_FPGA_core/ise_proj/fmc_dvidp_dvi_passthrough_demo_s6ivk.vhd" line 331: Output port <red_o> of the instance <fmc_dvidp_dvi_in_l> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/eansalab/Documents/Carlitos/RGBtoHSV_FPGA_core/ise_proj/fmc_dvidp_dvi_passthrough_demo_s6ivk.vhd" line 331: Output port <green_o> of the instance <fmc_dvidp_dvi_in_l> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/eansalab/Documents/Carlitos/RGBtoHSV_FPGA_core/ise_proj/fmc_dvidp_dvi_passthrough_demo_s6ivk.vhd" line 331: Output port <blue_o> of the instance <fmc_dvidp_dvi_in_l> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/eansalab/Documents/Carlitos/RGBtoHSV_FPGA_core/ise_proj/fmc_dvidp_dvi_passthrough_demo_s6ivk.vhd" line 398: Output port <debug> of the instance <fmc_dvidp_dvi_out_l> is unconnected or connected to loadless signal.
+    Summary:
+	no macro.
+Unit <fmc_dvidp_dvi_passthrough_demo> synthesized.
+
+Synthesizing Unit <FMC_DVIDP_CONFIG>.
+    Related source file is "/home/eansalab/Documents/Carlitos/RGBtoHSV_FPGA_core/ise_proj/FMC_DVIDP_CONFIG.v".
+        csr_reg_adr = 8'b00000000
+        i2c_reg_adr = 8'b00000001
+        dipsw_adr = 8'b00000010
+        pushb_adr = 8'b00000011
+INFO:Xst:3210 - "/home/eansalab/Documents/Carlitos/RGBtoHSV_FPGA_core/ise_proj/FMC_DVIDP_CONFIG.v" line 126: Output port <read_strobe> of the instance <cpu> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/eansalab/Documents/Carlitos/RGBtoHSV_FPGA_core/ise_proj/FMC_DVIDP_CONFIG.v" line 126: Output port <interrupt_ack> of the instance <cpu> is unconnected or connected to loadless signal.
+    Found 1-bit register for signal <SCL_OUT>.
+    Found 1-bit register for signal <SDA_OUT>.
+    Found 1-bit register for signal <RESET_OUT>.
+    Found 8-bit 4-to-1 multiplexer for signal <_n0038> created at line 75.
+    Summary:
+	inferred   3 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <FMC_DVIDP_CONFIG> synthesized.
+
+Synthesizing Unit <PB_FMC_DVIDP_CONFIG>.
+    Related source file is "/home/eansalab/Documents/Carlitos/RGBtoHSV_FPGA_core/ise_proj/PB_FMC_DVIDP_CONFIG.v".
+    Summary:
+	no macro.
+Unit <PB_FMC_DVIDP_CONFIG> synthesized.
+
+Synthesizing Unit <kcpsm3>.
+    Related source file is "/home/eansalab/Documents/Carlitos/RGBtoHSV_FPGA_core/ise_proj/kcpsm3.v".
+    Summary:
+	no macro.
+Unit <kcpsm3> synthesized.
+
+Synthesizing Unit <fmc_dvidp_dvi_in>.
+    Related source file is "/home/eansalab/Documents/Carlitos/RGBtoHSV_FPGA_core/ise_proj/fmc_dvidp_dvi_in.vhd".
+WARNING:Xst:647 - Input <ce> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 1-bit register for signal <vsync_r>.
+    Found 1-bit register for signal <hsync_r>.
+    Found 8-bit register for signal <red_r>.
+    Found 8-bit register for signal <green_r>.
+    Found 8-bit register for signal <blue_r>.
+    Found 1-bit register for signal <de_o>.
+    Found 1-bit register for signal <vsync_o>.
+    Found 1-bit register for signal <hsync_o>.
+    Found 8-bit register for signal <red_o>.
+    Found 8-bit register for signal <green_o>.
+    Found 8-bit register for signal <blue_o>.
+    Found 1-bit register for signal <de_r>.
+    Summary:
+	inferred  54 D-type flip-flop(s).
+Unit <fmc_dvidp_dvi_in> synthesized.
+
+Synthesizing Unit <RGBtoHSV>.
+    Related source file is "/home/eansalab/Documents/Carlitos/RGBtoHSV_FPGA_core/rgbtohsv.vhdl".
+    Found 15-bit subtractor for signal <n0092> created at line 736.
+    Found 15-bit subtractor for signal <n0097> created at line 738.
+    Found 15-bit subtractor for signal <n0099> created at line 740.
+    Found 14-bit adder for signal <S2sum> created at line 737.
+    Found 14-bit adder for signal <S4sum> created at line 739.
+    Found 8-bit subtractor for signal <diff> created at line 554.
+    Found 8-bit subtractor for signal <GmB> created at line 569.
+    Found 8-bit subtractor for signal <BmG> created at line 569.
+    Found 8-bit subtractor for signal <BmR> created at line 569.
+    Found 8-bit subtractor for signal <RmB> created at line 569.
+    Found 8-bit subtractor for signal <RmG> created at line 569.
+    Found 8-bit subtractor for signal <GmR> created at line 569.
+    Found 8x8-bit multiplier for signal <difft255> created at line 657.
+    Found 8x6-bit multiplier for signal <GmBt60> created at line 692.
+    Found 8x6-bit multiplier for signal <BmGt60> created at line 693.
+    Found 8x6-bit multiplier for signal <BmRt60> created at line 694.
+    Found 8x6-bit multiplier for signal <RmBt60> created at line 695.
+    Found 8x6-bit multiplier for signal <RmGt60> created at line 696.
+    Found 8x6-bit multiplier for signal <GmRt60> created at line 697.
+    Found 8-bit 7-to-1 multiplexer for signal <selector[2]_GND_69_o_wide_mux_55_OUT> created at line 773.
+    Found 8-bit comparator greater for signal <n0003> created at line 602
+    Found 8-bit comparator lessequal for signal <n0005> created at line 603
+    Found 8-bit comparator greater for signal <n0008> created at line 609
+    Found 8-bit comparator equal for signal <max[7]_Ru[7]_equal_43_o> created at line 744
+    Found 8-bit comparator greater for signal <Bu[7]_Gu[7]_LessThan_44_o> created at line 745
+    Found 8-bit comparator equal for signal <max[7]_Gu[7]_equal_46_o> created at line 750
+    Found 8-bit comparator equal for signal <max[7]_Bu[7]_equal_49_o> created at line 756
+    Found 8-bit comparator greater for signal <Gu[7]_Ru[7]_LessThan_50_o> created at line 757
+    Summary:
+	inferred   7 Multiplier(s).
+	inferred  12 Adder/Subtractor(s).
+	inferred   8 Comparator(s).
+	inferred  18 Multiplexer(s).
+Unit <RGBtoHSV> synthesized.
+
+Synthesizing Unit <divider_1>.
+    Related source file is "/home/eansalab/Documents/Carlitos/RGBtoHSV_FPGA_core/divider.vhdl".
+        Bin = 16
+    Summary:
+	no macro.
+Unit <divider_1> synthesized.
+
+Synthesizing Unit <div_16u_8u>.
+    Related source file is "".
+    Found 24-bit adder for signal <n0757> created at line 0.
+    Found 24-bit adder for signal <GND_72_o_b[7]_add_1_OUT> created at line 0.
+    Found 23-bit adder for signal <n0761> created at line 0.
+    Found 23-bit adder for signal <GND_72_o_b[7]_add_3_OUT> created at line 0.
+    Found 22-bit adder for signal <n0765> created at line 0.
+    Found 22-bit adder for signal <GND_72_o_b[7]_add_5_OUT> created at line 0.
+    Found 21-bit adder for signal <n0769> created at line 0.
+    Found 21-bit adder for signal <GND_72_o_b[7]_add_7_OUT> created at line 0.
+    Found 20-bit adder for signal <n0773> created at line 0.
+    Found 20-bit adder for signal <GND_72_o_b[7]_add_9_OUT> created at line 0.
+    Found 19-bit adder for signal <n0777> created at line 0.
+    Found 19-bit adder for signal <GND_72_o_b[7]_add_11_OUT> created at line 0.
+    Found 18-bit adder for signal <n0781> created at line 0.
+    Found 18-bit adder for signal <GND_72_o_b[7]_add_13_OUT> created at line 0.
+    Found 17-bit adder for signal <n0785> created at line 0.
+    Found 17-bit adder for signal <GND_72_o_b[7]_add_15_OUT> created at line 0.
+    Found 16-bit adder for signal <n0789> created at line 0.
+    Found 16-bit adder for signal <a[15]_b[7]_add_17_OUT> created at line 0.
+    Found 16-bit adder for signal <n0793> created at line 0.
+    Found 16-bit adder for signal <a[15]_GND_72_o_add_19_OUT> created at line 0.
+    Found 16-bit adder for signal <n0797> created at line 0.
+    Found 16-bit adder for signal <a[15]_GND_72_o_add_21_OUT> created at line 0.
+    Found 16-bit adder for signal <n0801> created at line 0.
+    Found 16-bit adder for signal <a[15]_GND_72_o_add_23_OUT> created at line 0.
+    Found 16-bit adder for signal <n0805> created at line 0.
+    Found 16-bit adder for signal <a[15]_GND_72_o_add_25_OUT> created at line 0.
+    Found 16-bit adder for signal <n0809> created at line 0.
+    Found 16-bit adder for signal <a[15]_GND_72_o_add_27_OUT[15:0]> created at line 0.
+    Found 16-bit adder for signal <n0813> created at line 0.
+    Found 16-bit adder for signal <a[15]_GND_72_o_add_29_OUT[15:0]> created at line 0.
+    Found 16-bit adder for signal <n0817> created at line 0.
+    Found 16-bit adder for signal <a[15]_GND_72_o_add_31_OUT[15:0]> created at line 0.
+    Found 24-bit comparator lessequal for signal <BUS_0001> created at line 0
+    Found 23-bit comparator lessequal for signal <BUS_0002> created at line 0
+    Found 22-bit comparator lessequal for signal <BUS_0003> created at line 0
+    Found 21-bit comparator lessequal for signal <BUS_0004> created at line 0
+    Found 20-bit comparator lessequal for signal <BUS_0005> created at line 0
+    Found 19-bit comparator lessequal for signal <BUS_0006> created at line 0
+    Found 18-bit comparator lessequal for signal <BUS_0007> created at line 0
+    Found 17-bit comparator lessequal for signal <BUS_0008> created at line 0
+    Found 16-bit comparator lessequal for signal <BUS_0009> created at line 0
+    Found 16-bit comparator lessequal for signal <BUS_0010> created at line 0
+    Found 16-bit comparator lessequal for signal <BUS_0011> created at line 0
+    Found 16-bit comparator lessequal for signal <BUS_0012> created at line 0
+    Found 16-bit comparator lessequal for signal <BUS_0013> created at line 0
+    Found 16-bit comparator lessequal for signal <BUS_0014> created at line 0
+    Found 16-bit comparator lessequal for signal <BUS_0015> created at line 0
+    Found 16-bit comparator lessequal for signal <BUS_0016> created at line 0
+    Found 16-bit comparator lessequal for signal <BUS_0017> created at line 0
+    Summary:
+	inferred  32 Adder/Subtractor(s).
+	inferred  17 Comparator(s).
+	inferred 211 Multiplexer(s).
+Unit <div_16u_8u> synthesized.
+
+Synthesizing Unit <divider_2>.
+    Related source file is "/home/eansalab/Documents/Carlitos/RGBtoHSV_FPGA_core/divider.vhdl".
+        Bin = 14
+    Summary:
+	no macro.
+Unit <divider_2> synthesized.
+
+Synthesizing Unit <div_14u_8u>.
+    Related source file is "".
+    Found 22-bit adder for signal <n0617> created at line 0.
+    Found 22-bit adder for signal <GND_75_o_b[7]_add_1_OUT> created at line 0.
+    Found 21-bit adder for signal <n0621> created at line 0.
+    Found 21-bit adder for signal <GND_75_o_b[7]_add_3_OUT> created at line 0.
+    Found 20-bit adder for signal <n0625> created at line 0.
+    Found 20-bit adder for signal <GND_75_o_b[7]_add_5_OUT> created at line 0.
+    Found 19-bit adder for signal <n0629> created at line 0.
+    Found 19-bit adder for signal <GND_75_o_b[7]_add_7_OUT> created at line 0.
+    Found 18-bit adder for signal <n0633> created at line 0.
+    Found 18-bit adder for signal <GND_75_o_b[7]_add_9_OUT> created at line 0.
+    Found 17-bit adder for signal <n0637> created at line 0.
+    Found 17-bit adder for signal <GND_75_o_b[7]_add_11_OUT> created at line 0.
+    Found 16-bit adder for signal <n0641> created at line 0.
+    Found 16-bit adder for signal <GND_75_o_b[7]_add_13_OUT> created at line 0.
+    Found 15-bit adder for signal <n0645> created at line 0.
+    Found 15-bit adder for signal <GND_75_o_b[7]_add_15_OUT> created at line 0.
+    Found 14-bit adder for signal <n0649> created at line 0.
+    Found 14-bit adder for signal <a[13]_b[7]_add_17_OUT> created at line 0.
+    Found 14-bit adder for signal <n0653> created at line 0.
+    Found 14-bit adder for signal <a[13]_GND_75_o_add_19_OUT> created at line 0.
+    Found 14-bit adder for signal <n0657> created at line 0.
+    Found 14-bit adder for signal <a[13]_GND_75_o_add_21_OUT> created at line 0.
+    Found 14-bit adder for signal <n0661> created at line 0.
+    Found 14-bit adder for signal <a[13]_GND_75_o_add_23_OUT[13:0]> created at line 0.
+    Found 14-bit adder for signal <n0665> created at line 0.
+    Found 14-bit adder for signal <a[13]_GND_75_o_add_25_OUT[13:0]> created at line 0.
+    Found 14-bit adder for signal <n0669> created at line 0.
+    Found 14-bit adder for signal <a[13]_GND_75_o_add_27_OUT[13:0]> created at line 0.
+    Found 22-bit comparator lessequal for signal <BUS_0001> created at line 0
+    Found 21-bit comparator lessequal for signal <BUS_0002> created at line 0
+    Found 20-bit comparator lessequal for signal <BUS_0003> created at line 0
+    Found 19-bit comparator lessequal for signal <BUS_0004> created at line 0
+    Found 18-bit comparator lessequal for signal <BUS_0005> created at line 0
+    Found 17-bit comparator lessequal for signal <BUS_0006> created at line 0
+    Found 16-bit comparator lessequal for signal <BUS_0007> created at line 0
+    Found 15-bit comparator lessequal for signal <BUS_0008> created at line 0
+    Found 14-bit comparator lessequal for signal <BUS_0009> created at line 0
+    Found 14-bit comparator lessequal for signal <BUS_0010> created at line 0
+    Found 14-bit comparator lessequal for signal <BUS_0011> created at line 0
+    Found 14-bit comparator lessequal for signal <BUS_0012> created at line 0
+    Found 14-bit comparator lessequal for signal <BUS_0013> created at line 0
+    Found 14-bit comparator lessequal for signal <BUS_0014> created at line 0
+    Found 14-bit comparator lessequal for signal <BUS_0015> created at line 0
+    Summary:
+	inferred  28 Adder/Subtractor(s).
+	inferred  15 Comparator(s).
+	inferred 157 Multiplexer(s).
+Unit <div_14u_8u> synthesized.
+
+Synthesizing Unit <videoMux>.
+    Related source file is "/home/eansalab/Documents/Carlitos/RGBtoHSV_FPGA_core/ise_proj/videoMux.vhdl".
+WARNING:Xst:647 - Input <Gray> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Summary:
+	inferred  22 Multiplexer(s).
+Unit <videoMux> synthesized.
+
+Synthesizing Unit <fmc_dvidp_dvi_out>.
+    Related source file is "/home/eansalab/Documents/Carlitos/RGBtoHSV_FPGA_core/ise_proj/fmc_dvidp_dvi_out.vhd".
+        C_FAMILY = "spartan6"
+WARNING:Xst:647 - Input <ce> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 1-bit register for signal <vsync_r>.
+    Found 1-bit register for signal <hsync_r>.
+    Found 8-bit register for signal <red_r>.
+    Found 8-bit register for signal <green_r>.
+    Found 8-bit register for signal <blue_r>.
+    Found 1-bit register for signal <dvi_de_o>.
+    Found 1-bit register for signal <dvi_vsync_o>.
+    Found 1-bit register for signal <dvi_hsync_o>.
+    Found 29-bit register for signal <debug>.
+    Found 1-bit register for signal <de_r>.
+    WARNING:Xst:2404 -  FFs/Latches <dvi_de_t<0:0>> (without init value) have a constant value of 0 in block <fmc_dvidp_dvi_out>.
+    WARNING:Xst:2404 -  FFs/Latches <dvi_vsync_t<0:0>> (without init value) have a constant value of 0 in block <fmc_dvidp_dvi_out>.
+    WARNING:Xst:2404 -  FFs/Latches <dvi_hsync_t<0:0>> (without init value) have a constant value of 0 in block <fmc_dvidp_dvi_out>.
+    Summary:
+	inferred  59 D-type flip-flop(s).
+Unit <fmc_dvidp_dvi_out> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Multipliers                                          : 7
+ 8x6-bit multiplier                                    : 6
+ 8x8-bit multiplier                                    : 1
+# Adders/Subtractors                                   : 212
+ 14-bit adder                                          : 74
+ 15-bit adder                                          : 12
+ 15-bit subtractor                                     : 3
+ 16-bit adder                                          : 28
+ 17-bit adder                                          : 14
+ 18-bit adder                                          : 14
+ 19-bit adder                                          : 14
+ 20-bit adder                                          : 14
+ 21-bit adder                                          : 14
+ 22-bit adder                                          : 14
+ 23-bit adder                                          : 2
+ 24-bit adder                                          : 2
+ 8-bit subtractor                                      : 7
+# Registers                                            : 25
+ 1-bit register                                        : 15
+ 29-bit register                                       : 1
+ 8-bit register                                        : 9
+# Comparators                                          : 115
+ 14-bit comparator lessequal                           : 42
+ 15-bit comparator lessequal                           : 6
+ 16-bit comparator lessequal                           : 15
+ 17-bit comparator lessequal                           : 7
+ 18-bit comparator lessequal                           : 7
+ 19-bit comparator lessequal                           : 7
+ 20-bit comparator lessequal                           : 7
+ 21-bit comparator lessequal                           : 7
+ 22-bit comparator lessequal                           : 7
+ 23-bit comparator lessequal                           : 1
+ 24-bit comparator lessequal                           : 1
+ 8-bit comparator equal                                : 3
+ 8-bit comparator greater                              : 4
+ 8-bit comparator lessequal                            : 1
+# Multiplexers                                         : 1194
+ 1-bit 2-to-1 multiplexer                              : 1138
+ 14-bit 2-to-1 multiplexer                             : 18
+ 16-bit 2-to-1 multiplexer                             : 3
+ 8-bit 2-to-1 multiplexer                              : 33
+ 8-bit 4-to-1 multiplexer                              : 1
+ 8-bit 7-to-1 multiplexer                              : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Multipliers                                          : 7
+ 8x6-bit multiplier                                    : 6
+ 8x8-bit multiplier                                    : 1
+# Adders/Subtractors                                   : 112
+ 14-bit adder carry in                                 : 84
+ 16-bit adder carry in                                 : 16
+ 8-bit subtractor                                      : 7
+ 9-bit adder                                           : 2
+ 9-bit subtractor                                      : 3
+# Registers                                            : 192
+ Flip-Flops                                            : 192
+# Comparators                                          : 115
+ 14-bit comparator lessequal                           : 42
+ 15-bit comparator lessequal                           : 6
+ 16-bit comparator lessequal                           : 15
+ 17-bit comparator lessequal                           : 7
+ 18-bit comparator lessequal                           : 7
+ 19-bit comparator lessequal                           : 7
+ 20-bit comparator lessequal                           : 7
+ 21-bit comparator lessequal                           : 7
+ 22-bit comparator lessequal                           : 7
+ 23-bit comparator lessequal                           : 1
+ 24-bit comparator lessequal                           : 1
+ 8-bit comparator equal                                : 3
+ 8-bit comparator greater                              : 4
+ 8-bit comparator lessequal                            : 1
+# Multiplexers                                         : 1194
+ 1-bit 2-to-1 multiplexer                              : 1138
+ 14-bit 2-to-1 multiplexer                             : 18
+ 16-bit 2-to-1 multiplexer                             : 3
+ 8-bit 2-to-1 multiplexer                              : 33
+ 8-bit 4-to-1 multiplexer                              : 1
+ 8-bit 7-to-1 multiplexer                              : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1710 - FF/Latch <debug_27> (without init value) has a constant value of 1 in block <fmc_dvidp_dvi_out>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <green_r_1> in Unit <fmc_dvidp_dvi_out> is equivalent to the following FF/Latch, which will be removed : <debug_9> 
+INFO:Xst:2261 - The FF/Latch <green_r_2> in Unit <fmc_dvidp_dvi_out> is equivalent to the following FF/Latch, which will be removed : <debug_10> 
+INFO:Xst:2261 - The FF/Latch <green_r_3> in Unit <fmc_dvidp_dvi_out> is equivalent to the following FF/Latch, which will be removed : <debug_11> 
+INFO:Xst:2261 - The FF/Latch <green_r_4> in Unit <fmc_dvidp_dvi_out> is equivalent to the following FF/Latch, which will be removed : <debug_12> 
+INFO:Xst:2261 - The FF/Latch <green_r_5> in Unit <fmc_dvidp_dvi_out> is equivalent to the following FF/Latch, which will be removed : <debug_13> 
+INFO:Xst:2261 - The FF/Latch <green_r_6> in Unit <fmc_dvidp_dvi_out> is equivalent to the following FF/Latch, which will be removed : <debug_14> 
+INFO:Xst:2261 - The FF/Latch <green_r_7> in Unit <fmc_dvidp_dvi_out> is equivalent to the following FF/Latch, which will be removed : <debug_15> 
+INFO:Xst:2261 - The FF/Latch <blue_r_0> in Unit <fmc_dvidp_dvi_out> is equivalent to the following FF/Latch, which will be removed : <debug_0> 
+INFO:Xst:2261 - The FF/Latch <blue_r_1> in Unit <fmc_dvidp_dvi_out> is equivalent to the following FF/Latch, which will be removed : <debug_1> 
+INFO:Xst:2261 - The FF/Latch <red_r_0> in Unit <fmc_dvidp_dvi_out> is equivalent to the following FF/Latch, which will be removed : <debug_16> 
+INFO:Xst:2261 - The FF/Latch <blue_r_2> in Unit <fmc_dvidp_dvi_out> is equivalent to the following FF/Latch, which will be removed : <debug_2> 
+INFO:Xst:2261 - The FF/Latch <red_r_1> in Unit <fmc_dvidp_dvi_out> is equivalent to the following FF/Latch, which will be removed : <debug_17> 
+INFO:Xst:2261 - The FF/Latch <blue_r_3> in Unit <fmc_dvidp_dvi_out> is equivalent to the following FF/Latch, which will be removed : <debug_3> 
+INFO:Xst:2261 - The FF/Latch <red_r_2> in Unit <fmc_dvidp_dvi_out> is equivalent to the following FF/Latch, which will be removed : <debug_18> 
+INFO:Xst:2261 - The FF/Latch <blue_r_4> in Unit <fmc_dvidp_dvi_out> is equivalent to the following FF/Latch, which will be removed : <debug_4> 
+INFO:Xst:2261 - The FF/Latch <red_r_3> in Unit <fmc_dvidp_dvi_out> is equivalent to the following FF/Latch, which will be removed : <debug_19> 
+INFO:Xst:2261 - The FF/Latch <blue_r_5> in Unit <fmc_dvidp_dvi_out> is equivalent to the following FF/Latch, which will be removed : <debug_5> 
+INFO:Xst:2261 - The FF/Latch <red_r_4> in Unit <fmc_dvidp_dvi_out> is equivalent to the following FF/Latch, which will be removed : <debug_20> 
+INFO:Xst:2261 - The FF/Latch <blue_r_6> in Unit <fmc_dvidp_dvi_out> is equivalent to the following FF/Latch, which will be removed : <debug_6> 
+INFO:Xst:2261 - The FF/Latch <red_r_5> in Unit <fmc_dvidp_dvi_out> is equivalent to the following FF/Latch, which will be removed : <debug_21> 
+INFO:Xst:2261 - The FF/Latch <blue_r_7> in Unit <fmc_dvidp_dvi_out> is equivalent to the following FF/Latch, which will be removed : <debug_7> 
+INFO:Xst:2261 - The FF/Latch <red_r_6> in Unit <fmc_dvidp_dvi_out> is equivalent to the following FF/Latch, which will be removed : <debug_22> 
+INFO:Xst:2261 - The FF/Latch <debug_24> in Unit <fmc_dvidp_dvi_out> is equivalent to the following FF/Latch, which will be removed : <de_r> 
+INFO:Xst:2261 - The FF/Latch <red_r_7> in Unit <fmc_dvidp_dvi_out> is equivalent to the following FF/Latch, which will be removed : <debug_23> 
+INFO:Xst:2261 - The FF/Latch <hsync_r> in Unit <fmc_dvidp_dvi_out> is equivalent to the following FF/Latch, which will be removed : <debug_26> 
+INFO:Xst:2261 - The FF/Latch <vsync_r> in Unit <fmc_dvidp_dvi_out> is equivalent to the following FF/Latch, which will be removed : <debug_25> 
+INFO:Xst:2261 - The FF/Latch <green_r_0> in Unit <fmc_dvidp_dvi_out> is equivalent to the following FF/Latch, which will be removed : <debug_8> 
+INFO:Xst:1901 - Instance rom in unit PB_FMC_DVIDP_CONFIG of type RAMB16_S18_S18 has been replaced by RAMB16BWER
+
+Optimizing unit <PB_FMC_DVIDP_CONFIG> ...
+
+Optimizing unit <kcpsm3> ...
+
+Optimizing unit <fmc_dvidp_dvi_in> ...
+
+Optimizing unit <divider_2> ...
+
+Optimizing unit <divider_1> ...
+
+Optimizing unit <vMux> ...
+
+Optimizing unit <fmc_dvidp_dvi_passthrough_demo> ...
+
+Optimizing unit <FMC_DVIDP_CONFIG> ...
+
+Optimizing unit <RGBtoHSV> ...
+
+Optimizing unit <div_14u_8u> ...
+
+Optimizing unit <div_16u_8u> ...
+
+Optimizing unit <fmc_dvidp_dvi_out> ...
+WARNING:Xst:2677 - Node <blue_r_0> of sequential type is unconnected in block <fmc_dvidp_dvi_in_l>.
+WARNING:Xst:2677 - Node <blue_r_1> of sequential type is unconnected in block <fmc_dvidp_dvi_in_l>.
+WARNING:Xst:2677 - Node <blue_r_2> of sequential type is unconnected in block <fmc_dvidp_dvi_in_l>.
+WARNING:Xst:2677 - Node <blue_r_3> of sequential type is unconnected in block <fmc_dvidp_dvi_in_l>.
+WARNING:Xst:2677 - Node <blue_r_4> of sequential type is unconnected in block <fmc_dvidp_dvi_in_l>.
+WARNING:Xst:2677 - Node <blue_r_5> of sequential type is unconnected in block <fmc_dvidp_dvi_in_l>.
+WARNING:Xst:2677 - Node <blue_r_6> of sequential type is unconnected in block <fmc_dvidp_dvi_in_l>.
+WARNING:Xst:2677 - Node <blue_r_7> of sequential type is unconnected in block <fmc_dvidp_dvi_in_l>.
+WARNING:Xst:2677 - Node <red_r_0> of sequential type is unconnected in block <fmc_dvidp_dvi_in_l>.
+WARNING:Xst:2677 - Node <red_r_1> of sequential type is unconnected in block <fmc_dvidp_dvi_in_l>.
+WARNING:Xst:2677 - Node <red_r_2> of sequential type is unconnected in block <fmc_dvidp_dvi_in_l>.
+WARNING:Xst:2677 - Node <red_r_3> of sequential type is unconnected in block <fmc_dvidp_dvi_in_l>.
+WARNING:Xst:2677 - Node <red_r_4> of sequential type is unconnected in block <fmc_dvidp_dvi_in_l>.
+WARNING:Xst:2677 - Node <red_r_5> of sequential type is unconnected in block <fmc_dvidp_dvi_in_l>.
+WARNING:Xst:2677 - Node <red_r_6> of sequential type is unconnected in block <fmc_dvidp_dvi_in_l>.
+WARNING:Xst:2677 - Node <red_r_7> of sequential type is unconnected in block <fmc_dvidp_dvi_in_l>.
+WARNING:Xst:2677 - Node <green_r_0> of sequential type is unconnected in block <fmc_dvidp_dvi_in_l>.
+WARNING:Xst:2677 - Node <green_r_1> of sequential type is unconnected in block <fmc_dvidp_dvi_in_l>.
+WARNING:Xst:2677 - Node <green_r_2> of sequential type is unconnected in block <fmc_dvidp_dvi_in_l>.
+WARNING:Xst:2677 - Node <green_r_3> of sequential type is unconnected in block <fmc_dvidp_dvi_in_l>.
+WARNING:Xst:2677 - Node <green_r_4> of sequential type is unconnected in block <fmc_dvidp_dvi_in_l>.
+WARNING:Xst:2677 - Node <green_r_5> of sequential type is unconnected in block <fmc_dvidp_dvi_in_l>.
+WARNING:Xst:2677 - Node <green_r_6> of sequential type is unconnected in block <fmc_dvidp_dvi_in_l>.
+WARNING:Xst:2677 - Node <green_r_7> of sequential type is unconnected in block <fmc_dvidp_dvi_in_l>.
+WARNING:Xst:2677 - Node <red_o_0> of sequential type is unconnected in block <fmc_dvidp_dvi_in_l>.
+WARNING:Xst:2677 - Node <red_o_1> of sequential type is unconnected in block <fmc_dvidp_dvi_in_l>.
+WARNING:Xst:2677 - Node <red_o_2> of sequential type is unconnected in block <fmc_dvidp_dvi_in_l>.
+WARNING:Xst:2677 - Node <red_o_3> of sequential type is unconnected in block <fmc_dvidp_dvi_in_l>.
+WARNING:Xst:2677 - Node <red_o_4> of sequential type is unconnected in block <fmc_dvidp_dvi_in_l>.
+WARNING:Xst:2677 - Node <red_o_5> of sequential type is unconnected in block <fmc_dvidp_dvi_in_l>.
+WARNING:Xst:2677 - Node <red_o_6> of sequential type is unconnected in block <fmc_dvidp_dvi_in_l>.
+WARNING:Xst:2677 - Node <red_o_7> of sequential type is unconnected in block <fmc_dvidp_dvi_in_l>.
+WARNING:Xst:2677 - Node <green_o_0> of sequential type is unconnected in block <fmc_dvidp_dvi_in_l>.
+WARNING:Xst:2677 - Node <green_o_1> of sequential type is unconnected in block <fmc_dvidp_dvi_in_l>.
+WARNING:Xst:2677 - Node <green_o_2> of sequential type is unconnected in block <fmc_dvidp_dvi_in_l>.
+WARNING:Xst:2677 - Node <green_o_3> of sequential type is unconnected in block <fmc_dvidp_dvi_in_l>.
+WARNING:Xst:2677 - Node <green_o_4> of sequential type is unconnected in block <fmc_dvidp_dvi_in_l>.
+WARNING:Xst:2677 - Node <green_o_5> of sequential type is unconnected in block <fmc_dvidp_dvi_in_l>.
+WARNING:Xst:2677 - Node <green_o_6> of sequential type is unconnected in block <fmc_dvidp_dvi_in_l>.
+WARNING:Xst:2677 - Node <green_o_7> of sequential type is unconnected in block <fmc_dvidp_dvi_in_l>.
+WARNING:Xst:2677 - Node <blue_o_0> of sequential type is unconnected in block <fmc_dvidp_dvi_in_l>.
+WARNING:Xst:2677 - Node <blue_o_1> of sequential type is unconnected in block <fmc_dvidp_dvi_in_l>.
+WARNING:Xst:2677 - Node <blue_o_2> of sequential type is unconnected in block <fmc_dvidp_dvi_in_l>.
+WARNING:Xst:2677 - Node <blue_o_3> of sequential type is unconnected in block <fmc_dvidp_dvi_in_l>.
+WARNING:Xst:2677 - Node <blue_o_4> of sequential type is unconnected in block <fmc_dvidp_dvi_in_l>.
+WARNING:Xst:2677 - Node <blue_o_5> of sequential type is unconnected in block <fmc_dvidp_dvi_in_l>.
+WARNING:Xst:2677 - Node <blue_o_6> of sequential type is unconnected in block <fmc_dvidp_dvi_in_l>.
+WARNING:Xst:2677 - Node <blue_o_7> of sequential type is unconnected in block <fmc_dvidp_dvi_in_l>.
+WARNING:Xst:2677 - Node <debug_28> of sequential type is unconnected in block <fmc_dvidp_dvi_out_l>.
+WARNING:Xst:1293 - FF/Latch <int_capture_flop> has a constant value of 0 in block <cpu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <int_flop> has a constant value of 0 in block <cpu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <ack_flop> has a constant value of 0 in block <cpu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <shadow_carry_flop> has a constant value of 0 in block <cpu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <shadow_zero_flop> has a constant value of 0 in block <cpu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <int_capture_flop> has a constant value of 0 in block <cpu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <int_flop> has a constant value of 0 in block <cpu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <ack_flop> has a constant value of 0 in block <cpu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <shadow_carry_flop> has a constant value of 0 in block <cpu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <shadow_zero_flop> has a constant value of 0 in block <cpu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <int_capture_flop> has a constant value of 0 in block <cpu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <int_flop> has a constant value of 0 in block <cpu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <ack_flop> has a constant value of 0 in block <cpu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <shadow_carry_flop> has a constant value of 0 in block <cpu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <shadow_zero_flop> has a constant value of 0 in block <cpu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <int_capture_flop> has a constant value of 0 in block <cpu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <int_flop> has a constant value of 0 in block <cpu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <ack_flop> has a constant value of 0 in block <cpu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <shadow_carry_flop> has a constant value of 0 in block <cpu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <shadow_zero_flop> has a constant value of 0 in block <cpu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <int_capture_flop> has a constant value of 0 in block <cpu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <int_flop> has a constant value of 0 in block <cpu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <ack_flop> has a constant value of 0 in block <cpu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <shadow_carry_flop> has a constant value of 0 in block <cpu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <shadow_zero_flop> has a constant value of 0 in block <cpu>. This FF/Latch will be trimmed during the optimization process.
+
+Mapping all equations...
+WARNING:Xst:1293 - FF/Latch <int_capture_flop> has a constant value of 0 in block <cpu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <int_flop> has a constant value of 0 in block <cpu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <ack_flop> has a constant value of 0 in block <cpu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <shadow_carry_flop> has a constant value of 0 in block <cpu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <shadow_zero_flop> has a constant value of 0 in block <cpu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <int_capture_flop> has a constant value of 0 in block <cpu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <int_flop> has a constant value of 0 in block <cpu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <ack_flop> has a constant value of 0 in block <cpu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <shadow_carry_flop> has a constant value of 0 in block <cpu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <shadow_zero_flop> has a constant value of 0 in block <cpu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <int_capture_flop> has a constant value of 0 in block <cpu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <int_flop> has a constant value of 0 in block <cpu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <ack_flop> has a constant value of 0 in block <cpu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <shadow_carry_flop> has a constant value of 0 in block <cpu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <shadow_zero_flop> has a constant value of 0 in block <cpu>. This FF/Latch will be trimmed during the optimization process.
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block fmc_dvidp_dvi_passthrough_demo, actual ratio is 0.
+WARNING:Xst:1293 - FF/Latch <int_capture_flop> has a constant value of 0 in block <cpu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <int_flop> has a constant value of 0 in block <cpu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <ack_flop> has a constant value of 0 in block <cpu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <shadow_carry_flop> has a constant value of 0 in block <cpu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <shadow_zero_flop> has a constant value of 0 in block <cpu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <int_capture_flop> has a constant value of 0 in block <cpu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <int_flop> has a constant value of 0 in block <cpu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <ack_flop> has a constant value of 0 in block <cpu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <shadow_carry_flop> has a constant value of 0 in block <cpu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <shadow_zero_flop> has a constant value of 0 in block <cpu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <int_capture_flop> has a constant value of 0 in block <cpu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <int_flop> has a constant value of 0 in block <cpu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <ack_flop> has a constant value of 0 in block <cpu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <shadow_carry_flop> has a constant value of 0 in block <cpu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <shadow_zero_flop> has a constant value of 0 in block <cpu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <int_capture_flop> has a constant value of 0 in block <cpu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <int_flop> has a constant value of 0 in block <cpu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <ack_flop> has a constant value of 0 in block <cpu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <shadow_carry_flop> has a constant value of 0 in block <cpu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <shadow_zero_flop> has a constant value of 0 in block <cpu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <int_capture_flop> has a constant value of 0 in block <cpu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <int_flop> has a constant value of 0 in block <cpu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <ack_flop> has a constant value of 0 in block <cpu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <shadow_carry_flop> has a constant value of 0 in block <cpu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <shadow_zero_flop> has a constant value of 0 in block <cpu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <int_capture_flop> has a constant value of 0 in block <cpu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <int_flop> has a constant value of 0 in block <cpu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <ack_flop> has a constant value of 0 in block <cpu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <shadow_carry_flop> has a constant value of 0 in block <cpu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <shadow_zero_flop> has a constant value of 0 in block <cpu>. This FF/Latch will be trimmed during the optimization process.
+
+Final Macro Processing ...
+
+Processing Unit <fmc_dvidp_dvi_in_l> :
+	Found 2-bit shift register for signal <de_o>.
+	Found 2-bit shift register for signal <vsync_o>.
+	Found 2-bit shift register for signal <hsync_o>.
+Unit <fmc_dvidp_dvi_in_l> processed.
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 109
+ Flip-Flops                                            : 109
+# Shift Registers                                      : 3
+ 2-bit shift register                                  : 3
+
+=========================================================================
+WARNING:Xst:1293 - FF/Latch <int_capture_flop> has a constant value of 0 in block <cpu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <int_flop> has a constant value of 0 in block <cpu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <ack_flop> has a constant value of 0 in block <cpu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <shadow_carry_flop> has a constant value of 0 in block <cpu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <shadow_zero_flop> has a constant value of 0 in block <cpu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <int_capture_flop> has a constant value of 0 in block <cpu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <int_flop> has a constant value of 0 in block <cpu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <ack_flop> has a constant value of 0 in block <cpu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <shadow_carry_flop> has a constant value of 0 in block <cpu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <shadow_zero_flop> has a constant value of 0 in block <cpu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <int_capture_flop> has a constant value of 0 in block <cpu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <int_flop> has a constant value of 0 in block <cpu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <ack_flop> has a constant value of 0 in block <cpu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <shadow_carry_flop> has a constant value of 0 in block <cpu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <shadow_zero_flop> has a constant value of 0 in block <cpu>. This FF/Latch will be trimmed during the optimization process.
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : fmc_dvidp_dvi_passthrough_demo.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 3770
+#      GND                         : 7
+#      INV                         : 7
+#      LUT2                        : 179
+#      LUT3                        : 330
+#      LUT4                        : 574
+#      LUT5                        : 586
+#      LUT6                        : 560
+#      MUXCY                       : 787
+#      MUXF5                       : 9
+#      MUXF7                       : 2
+#      VCC                         : 12
+#      XORCY                       : 717
+# FlipFlops/Latches                : 138
+#      FD                          : 55
+#      FDE                         : 8
+#      FDR                         : 39
+#      FDRE                        : 8
+#      FDS                         : 2
+#      ODDR2                       : 26
+# RAMS                             : 27
+#      RAM16X1D                    : 8
+#      RAM32X1S                    : 10
+#      RAM64X1S                    : 8
+#      RAMB16BWER                  : 1
+# Shift Registers                  : 3
+#      SRLC16E                     : 3
+# Clock Buffers                    : 2
+#      BUFG                        : 2
+# IO Buffers                       : 72
+#      IBUF                        : 40
+#      IBUFG                       : 1
+#      IOBUF                       : 1
+#      OBUF                        : 13
+#      OBUFT                       : 17
+# DCMs                             : 1
+#      DCM_SP                      : 1
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx150tfgg676-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             138  out of  184304     0%  
+ Number of Slice LUTs:                 2273  out of  92152     2%  
+    Number used as Logic:              2236  out of  92152     2%  
+    Number used as Memory:               37  out of  21680     0%  
+       Number used as RAM:               34
+       Number used as SRL:                3
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:   2347
+   Number with an unused Flip Flop:    2209  out of   2347    94%  
+   Number with an unused LUT:            74  out of   2347     3%  
+   Number of fully used LUT-FF pairs:    64  out of   2347     2%  
+   Number of unique control sets:        15
+
+IO Utilization: 
+ Number of IOs:                          72
+ Number of bonded IOBs:                  72  out of    396    18%  
+
+Specific Feature Utilization:
+ Number of Block RAM/FIFO:                1  out of    268     0%  
+    Number using Block RAM only:          1
+ Number of BUFG/BUFGCTRLs:                2  out of     16    12%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+----------------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)            | Load  |
+-----------------------------------+----------------------------------+-------+
+clk_100mhz                         | DCM_SP:CLKDV                     | 106   |
+fmc_dvidp_config_l/prog/LOAD_WE    | NONE(fmc_dvidp_config_l/prog/rom)| 1     |
+fmc_dvidp_dvii_clk                 | IBUFG+BUFG                       | 88    |
+-----------------------------------+----------------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 4.634ns (Maximum Frequency: 215.790MHz)
+   Minimum input arrival time before clock: 73.312ns
+   Maximum output required time after clock: 4.382ns
+   Maximum combinational path delay: 5.439ns
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk_100mhz'
+  Clock period: 4.634ns (frequency: 215.790MHz)
+  Total number of paths / destination ports: 4464 / 361
+-------------------------------------------------------------------------
+Delay:               9.268ns (Levels of Logic = 13)
+  Source:            fmc_dvidp_config_l/prog/rom (RAM)
+  Destination:       fmc_dvidp_config_l/cpu/zero_flag_flop (FF)
+  Source Clock:      clk_100mhz rising 0.5X
+  Destination Clock: clk_100mhz rising 0.5X
+
+  Data Path: fmc_dvidp_config_l/prog/rom to fmc_dvidp_config_l/cpu/zero_flag_flop
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     RAMB16BWER:CLKA->DOA4   10   1.850   0.856  rom (INSTRUCTION<4>)
+     end scope: 'fmc_dvidp_config_l/prog:INSTRUCTION<4>'
+     begin scope: 'fmc_dvidp_config_l/cpu:instruction<4>'
+     RAM16X1D:DPRA0->DPO    1   0.205   0.580  reg_loop[4].reg_loop_register_bit (sy<4>)
+     LUT3:I2->O           12   0.567   1.156  reg_loop[4].operand_select_mux (port_id<4>)
+     end scope: 'fmc_dvidp_config_l/cpu:port_id<4>'
+     LUT6:I2->O            4   0.203   0.684  _n0039<7>1 (_n0039)
+     LUT4:I3->O            1   0.205   0.684  rd_dat<3>1 (rd_dat<3>)
+     begin scope: 'fmc_dvidp_config_l/cpu:in_port<3>'
+     LUT3:I1->O            1   0.463   0.000  alu_mux_loop[3].mux_lut (input_group<3>)
+     MUXF5:I1->O           2   0.140   0.617  alu_mux_loop[3].shift_in_muxf5 (alu_result<3>)
+     LUT4:I3->O            1   0.567   0.000  low_zero_lut (low_zero)
+     MUXCY:S->O            1   0.172   0.000  low_zero_muxcy (low_zero_carry)
+     MUXCY:CI->O           1   0.019   0.000  high_zero_cymux (high_zero_carry)
+     MUXCY:CI->O           0   0.019   0.000  zero_cymux (zero_carry)
+     XORCY:CI->O           1   0.180   0.000  zero_xor (zero_fast_route)
+     FDRE:D                    0.102          zero_flag_flop
+    ----------------------------------------
+    Total                      9.268ns (4.692ns logic, 4.576ns route)
+                                       (50.6% logic, 49.4% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'fmc_dvidp_dvii_clk'
+  Clock period: 2.052ns (frequency: 487.401MHz)
+  Total number of paths / destination ports: 33 / 33
+-------------------------------------------------------------------------
+Delay:               1.026ns (Levels of Logic = 0)
+  Source:            fmc_dvidp_dvi_out_l/green_r_4 (FF)
+  Destination:       fmc_dvidp_dvi_out_l/S6_GEN.O1[0].ODDR_dvi_data_o (FF)
+  Source Clock:      fmc_dvidp_dvii_clk rising
+  Destination Clock: fmc_dvidp_dvii_clk falling
+
+  Data Path: fmc_dvidp_dvi_out_l/green_r_4 to fmc_dvidp_dvi_out_l/S6_GEN.O1[0].ODDR_dvi_data_o
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               1   0.447   0.579  green_r_4 (green_r_4)
+     ODDR2:D1                  0.000          S6_GEN.O1[0].ODDR_dvi_data_o
+    ----------------------------------------
+    Total                      1.026ns (0.447ns logic, 0.579ns route)
+                                       (43.6% logic, 56.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk_100mhz'
+  Total number of paths / destination ports: 10 / 5
+-------------------------------------------------------------------------
+Offset:              5.349ns (Levels of Logic = 10)
+  Source:            push_buttons<0> (PAD)
+  Destination:       fmc_dvidp_config_l/cpu/zero_flag_flop (FF)
+  Destination Clock: clk_100mhz rising 0.5X
+
+  Data Path: push_buttons<0> to fmc_dvidp_config_l/cpu/zero_flag_flop
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             2   1.222   0.961  push_buttons_0_IBUF (push_buttons_0_IBUF)
+     begin scope: 'fmc_dvidp_config_l:PUSHB_IN<0>'
+     LUT5:I0->O            1   0.203   0.684  rd_dat<0>1 (rd_dat<0>)
+     begin scope: 'fmc_dvidp_config_l/cpu:in_port<0>'
+     LUT3:I1->O            1   0.463   0.000  alu_mux_loop[0].mux_lut (input_group<0>)
+     MUXF5:I1->O           2   0.140   0.864  alu_mux_loop[0].shift_in_muxf5 (alu_result<0>)
+     LUT4:I0->O            1   0.320   0.000  low_zero_lut (low_zero)
+     MUXCY:S->O            1   0.172   0.000  low_zero_muxcy (low_zero_carry)
+     MUXCY:CI->O           1   0.019   0.000  high_zero_cymux (high_zero_carry)
+     MUXCY:CI->O           0   0.019   0.000  zero_cymux (zero_carry)
+     XORCY:CI->O           1   0.180   0.000  zero_xor (zero_fast_route)
+     FDRE:D                    0.102          zero_flag_flop
+    ----------------------------------------
+    Total                      5.349ns (2.840ns logic, 2.509ns route)
+                                       (53.1% logic, 46.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'fmc_dvidp_dvii_clk'
+  Total number of paths / destination ports: 146626715981668325261312 / 27
+-------------------------------------------------------------------------
+Offset:              73.312ns (Levels of Logic = 77)
+  Source:            fmc_dvidp_dvii_blue<2> (PAD)
+  Destination:       fmc_dvidp_dvi_out_l/blue_r_7 (FF)
+  Destination Clock: fmc_dvidp_dvii_clk rising
+
+  Data Path: fmc_dvidp_dvii_blue<2> to fmc_dvidp_dvi_out_l/blue_r_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            15   1.222   1.326  fmc_dvidp_dvii_blue_2_IBUF (fmc_dvidp_dvii_blue_2_IBUF)
+     begin scope: 'cconv:B<2>'
+     LUT6:I1->O            2   0.203   0.864  n00032 (n00031)
+     LUT6:I2->O            1   0.203   0.000  n00031_G (N25)
+     MUXF7:I1->O           2   0.140   0.845  n00031 (n00032)
+     LUT5:I2->O           24   0.205   1.537  n000321 (n0003)
+     LUT6:I0->O           51   0.203   1.554  Mmux_max21 (V<1>)
+     MUXCY:DI->O           1   0.145   0.000  Msub_diff_cy<1> (Msub_diff_cy<1>)
+     XORCY:CI->O         201   0.180   2.282  Msub_diff_xor<2> (Mmult_difft255_Madd_lut<4>)
+     LUT3:I0->O            1   0.205   0.580  diff[7]_GND_69_o_equal_55_o<7>_SW0 (N2)
+     LUT6:I5->O           10   0.205   0.961  diff[7]_GND_69_o_equal_55_o<7> (diff[7]_GND_69_o_equal_55_o)
+     LUT2:I0->O          231   0.203   2.406  Mmux_fdiff11 (fdiff<0>)
+     begin scope: 'cconv/S1:divisor<0>'
+     begin scope: 'cconv/S1/Auns[13]_Buns[7]_div_2:b<0>'
+     LUT6:I1->O            2   0.203   0.981  Mmux_a[0]_GND_75_o_MUX_570_o141 (a[13]_GND_75_o_MUX_557_o)
+     LUT6:I0->O            4   0.203   1.048  o<11>12 (o<11>)
+     LUT6:I0->O            2   0.203   0.981  Mmux_a[0]_GND_75_o_MUX_589_o131 (a[12]_GND_75_o_MUX_577_o)
+     LUT6:I0->O            2   0.203   0.721  o<10>2 (Madd_GND_75_o_b[7]_add_9_OUT_Madd_Madd_cy<12>)
+     LUT5:I3->O            4   0.203   1.048  o<10>11 (o<10>)
+     LUT6:I0->O            2   0.203   0.981  Mmux_a[0]_GND_75_o_MUX_607_o121 (a[11]_GND_75_o_MUX_596_o)
+     LUT6:I0->O            5   0.203   0.962  o<9>2 (Madd_GND_75_o_b[7]_add_11_OUT_Madd_Madd_cy<11>)
+     LUT6:I2->O           12   0.203   1.273  o<9>11 (o<9>)
+     LUT6:I0->O            2   0.203   0.981  Mmux_a[0]_GND_75_o_MUX_624_o111 (a[10]_GND_75_o_MUX_614_o)
+     LUT6:I0->O            1   0.203   0.808  o<8>1 (o<8>1)
+     LUT3:I0->O            1   0.205   0.684  o<8>24_SW0 (N19)
+     LUT6:I4->O           16   0.203   1.349  o<8>24 (o<8>)
+     LUT5:I0->O            3   0.203   1.015  Mmux_a[0]_GND_75_o_MUX_640_o1131 (a[9]_GND_75_o_MUX_631_o)
+     LUT6:I0->O            2   0.203   0.864  o<7>3 (o<7>1)
+     LUT6:I2->O            1   0.203   0.000  o<7>1_G (N28)
+     MUXF7:I1->O           9   0.140   1.058  o<7>1 (o<7>2)
+     LUT6:I3->O            6   0.205   1.109  Mmux_a[0]_GND_75_o_MUX_670_o1121 (a[8]_GND_75_o_MUX_662_o)
+     LUT6:I0->O            1   0.203   0.684  o<6>3 (o<6>1)
+     LUT3:I1->O            1   0.203   0.580  o<6>1_SW2 (N21)
+     LUT5:I4->O            2   0.205   0.845  o<6>1 (o<6>2)
+     LUT5:I2->O           28   0.205   1.579  o<6>21 (o<6>)
+     LUT5:I0->O            5   0.203   1.079  Mmux_a[0]_a[13]_MUX_698_o1111 (a[7]_a[13]_MUX_691_o)
+     LUT6:I0->O            1   0.203   0.827  o<5>3 (o<5>1)
+     LUT5:I1->O            1   0.203   0.580  o<5>1_SW4 (N17)
+     LUT5:I4->O            1   0.205   0.684  o<5>1 (o<5>2)
+     LUT6:I4->O           35   0.203   1.679  o<5>21 (o<5>)
+     LUT5:I0->O            3   0.203   0.879  Mmux_a[0]_a[13]_MUX_712_o1101 (a[6]_a[13]_MUX_706_o)
+     LUT4:I1->O            1   0.205   0.000  Mcompar_o<4>_lut<1> (Mcompar_o<4>_lut<1>)
+     MUXCY:S->O            1   0.172   0.000  Mcompar_o<4>_cy<1> (Mcompar_o<4>_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<4>_cy<2> (Mcompar_o<4>_cy<2>)
+     MUXCY:CI->O           1   0.213   0.580  Mcompar_o<4>_cy<3> (Mcompar_o<4>_cy<3>)
+     LUT6:I5->O           26   0.205   1.551  Mcompar_o<4>_cy<4> (o<4>)
+     LUT5:I0->O            4   0.203   1.028  Mmux_a[0]_a[13]_MUX_726_o111 (a[10]_a[13]_MUX_716_o)
+     LUT5:I0->O            0   0.203   0.000  Mcompar_o<3>_lutdi3 (Mcompar_o<3>_lutdi3)
+     MUXCY:DI->O          21   0.339   1.114  Mcompar_o<3>_cy<3> (Mcompar_o<3>_cy<3>)
+     LUT3:I2->O           11   0.205   1.227  Mcompar_o<3>_cy<4> (o<3>)
+     LUT5:I0->O            3   0.203   0.879  n0663<4>1 (n0663<4>)
+     LUT4:I1->O            1   0.205   0.000  Mcompar_o<2>_lut<1> (Mcompar_o<2>_lut<1>)
+     MUXCY:S->O            1   0.172   0.000  Mcompar_o<2>_cy<1> (Mcompar_o<2>_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<2>_cy<2> (Mcompar_o<2>_cy<2>)
+     MUXCY:CI->O          13   0.213   0.933  Mcompar_o<2>_cy<3> (Mcompar_o<2>_cy<3>)
+     LUT4:I3->O           26   0.205   1.551  Mcompar_o<2>_cy<4> (o<2>)
+     LUT5:I0->O            2   0.203   0.845  n0667<3>1 (n0667<3>)
+     LUT4:I1->O            1   0.205   0.000  Mcompar_o<1>_lut<1> (Mcompar_o<1>_lut<1>)
+     MUXCY:S->O            1   0.172   0.000  Mcompar_o<1>_cy<1> (Mcompar_o<1>_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_o<1>_cy<2> (Mcompar_o<1>_cy<2>)
+     MUXCY:CI->O           1   0.213   0.580  Mcompar_o<1>_cy<3> (Mcompar_o<1>_cy<3>)
+     LUT6:I5->O            1   0.205   0.580  Mcompar_o<1>_cy<4>_SW0 (N23)
+     LUT6:I5->O           18   0.205   1.394  Mcompar_o<1>_cy<4> (o<1>)
+     LUT5:I0->O            2   0.203   0.961  Mmux_n0610121 (n0610<7>)
+     LUT5:I0->O            0   0.203   0.000  Mcompar_o<0>_lutdi3 (Mcompar_o<0>_lutdi3)
+     MUXCY:DI->O           1   0.339   0.580  Mcompar_o<0>_cy<3> (Mcompar_o<0>_cy<3>)
+     LUT6:I5->O            5   0.205   0.715  Mcompar_o<0>_cy<4> (o<0>)
+     end scope: 'cconv/S1/Auns[13]_Buns[7]_div_2:o<0>'
+     end scope: 'cconv/S1:resultado<0>'
+     LUT3:I2->O            3   0.205   0.898  Msub_n0092_Madd_cy<2>11 (Msub_n0092_Madd_cy<2>)
+     LUT5:I1->O            2   0.203   0.845  Msub_n0092_Madd_cy<6>11 (Msub_n0092_Madd_cy<6>)
+     LUT6:I3->O            2   0.205   0.981  Mmux_selector[2]_GND_69_o_wide_mux_55_OUT84 (Mmux_selector[2]_GND_69_o_wide_mux_55_OUT83)
+     LUT6:I0->O            1   0.203   0.827  Mmux_selector[2]_GND_69_o_wide_mux_55_OUT87 (selector[2]_GND_69_o_wide_mux_55_OUT<7>)
+     LUT6:I2->O            4   0.203   1.048  Hbuff[7]_PWR_63_o_equal_58_o<7> (Hbuff[7]_PWR_63_o_equal_58_o)
+     LUT6:I0->O            3   0.203   0.755  Mmux_H81 (H<7>)
+     end scope: 'cconv:H<7>'
+     begin scope: 'vMux:HSV<23>'
+     LUT6:I4->O            1   0.203   0.580  Mmux_C3B164 (Mmux_C3B163)
+     LUT5:I4->O            1   0.205   0.000  Mmux_C3B165 (C3B<7>)
+     end scope: 'vMux:C3B<7>'
+     begin scope: 'fmc_dvidp_dvi_out_l:blue_i<7>'
+     FD:D                      0.102          blue_r_7
+    ----------------------------------------
+    Total                     73.312ns (15.227ns logic, 58.085ns route)
+                                       (20.8% logic, 79.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'fmc_dvidp_dvii_clk'
+  Total number of paths / destination ports: 3 / 3
+-------------------------------------------------------------------------
+Offset:              3.597ns (Levels of Logic = 2)
+  Source:            fmc_dvidp_dvi_out_l/dvi_de_o (FF)
+  Destination:       fmc_dvidp_dvio_de (PAD)
+  Source Clock:      fmc_dvidp_dvii_clk rising
+
+  Data Path: fmc_dvidp_dvi_out_l/dvi_de_o to fmc_dvidp_dvio_de
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               1   0.447   0.579  dvi_de_o (dvi_de_o)
+     OBUFT:I->O                2.571          OBUFT_dvi_de (dvi_de)
+     end scope: 'fmc_dvidp_dvi_out_l:dvi_de'
+    ----------------------------------------
+    Total                      3.597ns (3.018ns logic, 0.579ns route)
+                                       (83.9% logic, 16.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk_100mhz'
+  Total number of paths / destination ports: 3 / 3
+-------------------------------------------------------------------------
+Offset:              4.382ns (Levels of Logic = 3)
+  Source:            fmc_dvidp_config_l/RESET_OUT (FF)
+  Destination:       fmc_dvidp_i2c_rst (PAD)
+  Source Clock:      clk_100mhz rising 0.5X
+
+  Data Path: fmc_dvidp_config_l/RESET_OUT to fmc_dvidp_i2c_rst
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              1   0.447   0.579  RESET_OUT (RESET_OUT)
+     end scope: 'fmc_dvidp_config_l:RESET_OUT'
+     INV:I->O              1   0.206   0.579  fmc_dvidp_i2c_rst1_INV_0 (fmc_dvidp_i2c_rst_OBUF)
+     OBUF:I->O                 2.571          fmc_dvidp_i2c_rst_OBUF (fmc_dvidp_i2c_rst)
+    ----------------------------------------
+    Total                      4.382ns (3.224ns logic, 1.158ns route)
+                                       (73.6% logic, 26.4% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 9 / 9
+-------------------------------------------------------------------------
+Delay:               5.439ns (Levels of Logic = 2)
+  Source:            switch<3> (PAD)
+  Destination:       led<3> (PAD)
+
+  Data Path: switch<3> to led<3>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            65   1.222   1.646  switch_3_IBUF (led_3_OBUF)
+     OBUF:I->O                 2.571          led_3_OBUF (led<3>)
+    ----------------------------------------
+    Total                      5.439ns (3.793ns logic, 1.646ns route)
+                                       (69.7% logic, 30.3% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk_100mhz
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk_100mhz     |    9.268|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock fmc_dvidp_dvii_clk
+------------------+---------+---------+---------+---------+
+                  | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock      |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+------------------+---------+---------+---------+---------+
+fmc_dvidp_dvii_clk|    1.415|         |    1.026|         |
+------------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 9.00 secs
+Total CPU time to Xst completion: 9.38 secs
+ 
+--> 
+
+
+Total memory usage is 427448 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  172 (   0 filtered)
+Number of infos    :   35 (   0 filtered)
+

@@ -1,0 +1,65 @@
+Release 14.7 ngdbuild P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Command Line: /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/ngdbuild -intstyle
+ise -dd _ngo -nt timestamp -uc fmc_dvidp_dvi_passthrough_demo_s6ivk.ucf -p
+xc6slx150t-fgg676-3 fmc_dvidp_dvi_passthrough_demo.ngc
+fmc_dvidp_dvi_passthrough_demo.ngd
+
+Reading NGO file
+"/home/eansalab/Documents/Carlitos/RGBtoHSV_FPGA_core/ise_proj/fmc_dvidp_dvi_pas
+sthrough_demo.ngc" ...
+Gathering constraint information from source properties...
+Done.
+
+Annotating constraints to design from ucf file
+"fmc_dvidp_dvi_passthrough_demo_s6ivk.ucf" ...
+Resolving constraint associations...
+Checking Constraint Associations...
+WARNING:ConstraintSystem:56 - Constraint <TIMESPEC TS_fmc_dvidp_dvii_clk =
+   PERIOD fmc_dvidp_dvii_clk 6.0 ns;>
+   [fmc_dvidp_dvi_passthrough_demo_s6ivk.ucf(63)]: Unable to find an active
+   'TNM' or 'TimeGrp' constraint named 'fmc_dvidp_dvii_clk'.
+
+INFO:ConstraintSystem:178 - TNM 'sys_clk', used in period specification
+   'TS_sys_clk', was traced into DCM_SP instance DCM_SP_inst. The following new
+   TNM groups and period specifications were generated at the DCM_SP output(s): 
+   CLKDV: <TIMESPEC TS_sys_clk_dv = PERIOD "sys_clk_dv" TS_sys_clk * 2 HIGH 50%>
+
+Done...
+
+WARNING:NgdBuild:1212 - User specified non-default attribute value (20.0) was
+   detected for the CLKIN_PERIOD attribute on DCM "DCM_SP_inst".  This does not
+   match the PERIOD constraint value (10000 ps.).  The uncertainty calculation
+   will use the non-default attribute value.  This could result in incorrect
+   uncertainty calculated for DCM output clocks.
+Checking expanded design ...
+WARNING:NgdBuild:452 - logical net 'cconv/S1/resultado<13>' has no driver
+WARNING:NgdBuild:452 - logical net 'cconv/S0/resultado<13>' has no driver
+WARNING:NgdBuild:452 - logical net 'cconv/S0/resultado<0>' has no driver
+WARNING:NgdBuild:452 - logical net 'cconv/S5/resultado<13>' has no driver
+WARNING:NgdBuild:452 - logical net 'cconv/S4/resultado<13>' has no driver
+WARNING:NgdBuild:452 - logical net 'cconv/S4/resultado<0>' has no driver
+WARNING:NgdBuild:452 - logical net 'cconv/S3/resultado<13>' has no driver
+WARNING:NgdBuild:452 - logical net 'cconv/S2/resultado<13>' has no driver
+WARNING:NgdBuild:452 - logical net 'cconv/S2/resultado<0>' has no driver
+WARNING:NgdBuild:452 - logical net 'cconv/Scalc/resultado<15>' has no driver
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+NGDBUILD Design Results Summary:
+  Number of errors:     0
+  Number of warnings:  12
+
+Total memory usage is 423616 kilobytes
+
+Writing NGD file "fmc_dvidp_dvi_passthrough_demo.ngd" ...
+Total REAL time to NGDBUILD completion:  2 sec
+Total CPU time to NGDBUILD completion:   2 sec
+
+Writing NGDBUILD log file "fmc_dvidp_dvi_passthrough_demo.bld"...

@@ -1,0 +1,43 @@
+Release 14.2 ngcbuild P.28xd (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: ngcbuild.exe -dd C:/Users/Jeaneth/Desktop/Como usar System
+Generator/Avnet-AES-S6IVK-LX150T-G-FMCDVI_DVI_Pass_Through_Demo_ISE_Design_Suite
+_12_2/FMCDVI_DVI_Pass_Through_Demo_12_2_20100921/vhdl/ise_s6ivk/_ngo -p
+xc6slx150t-fgg676-3 -i C:\Users\Jeaneth\Desktop\Como usar System
+Generator\Avnet-AES-S6IVK-LX150T-G-FMCDVI_DVI_Pass_Through_Demo_ISE_Design_Suite
+_12_2\FMCDVI_DVI_Pass_Through_Demo_12_2_20100921\vhdl\ise_s6ivk\fmc_dvidp_dvi_pa
+ssthrough_demo.ngc C:\Users\Jeaneth\Desktop\Como usar System
+Generator\Avnet-AES-S6IVK-LX150T-G-FMCDVI_DVI_Pass_Through_Demo_ISE_Design_Suite
+_12_2\FMCDVI_DVI_Pass_Through_Demo_12_2_20100921\vhdl\ise_s6ivk\fmc_dvidp_dvi_pa
+ssthrough_demo_cs.ngc
+
+Reading NGO file "C:/Users/Jeaneth/Desktop/Como usar System
+Generator/Avnet-AES-S6IVK-LX150T-G-FMCDVI_DVI_Pass_Through_Demo_ISE_Design_Suite
+_12_2/FMCDVI_DVI_Pass_Through_Demo_12_2_20100921/vhdl/ise_s6ivk/fmc_dvidp_dvi_pa
+ssthrough_demo.ngc" ...
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+NGCBUILD Design Results Summary:
+  Number of errors:     0
+  Number of warnings:   0
+
+Total memory usage is 153096 kilobytes
+
+Writing NGC file "C:/Users/Jeaneth/Desktop/Como usar System
+Generator/Avnet-AES-S6IVK-LX150T-G-FMCDVI_DVI_Pass_Through_Demo_ISE_Design_Suite
+_12_2/FMCDVI_DVI_Pass_Through_Demo_12_2_20100921/vhdl/ise_s6ivk/fmc_dvidp_dvi_pa
+ssthrough_demo_cs.ngc" ...
+Total REAL time to NGCBUILD completion:  3 sec
+Total CPU time to NGCBUILD completion:   3 sec
+
+Writing NGCBUILD log file "C:/Users/Jeaneth/Desktop/Como usar System
+Generator/Avnet-AES-S6IVK-LX150T-G-FMCDVI_DVI_Pass_Through_Demo_ISE_Design_Suite
+_12_2/FMCDVI_DVI_Pass_Through_Demo_12_2_20100921/vhdl/ise_s6ivk/fmc_dvidp_dvi_pa
+ssthrough_demo_cs.blc"...
